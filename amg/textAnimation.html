@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title> text animation </title>
+  <style>
+	*{margin: 0;padding: 0;}
+	img{vertical-align: top;}
+	.blind{font-size: 0;line-height: 0;width: 1px;height: 1px;overflow: hidden;position: absolute;top: 0;left: -9999px;}
+
+	#txtBox{width: 600px;margin: 100px auto;background: pink;padding: 50px 0;text-align: center;}
+	#txtBox img{opacity: 0;}
+  </style>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+  <script>
+	$(document).ready(function() {
+		var current = 0;   //시작되는 이미지의 번호
+		var maxNum = 8;
+
+		var timer = setInterval(function () {
+			$('#txtBox img').eq(current).animate({opacity: 1});
+			current++;    //1, 2,3,4......8
+
+			if (current == maxNum) clearInterval(timer);
+			console.log(current);
+		  }, 5000);
+	});
+  </script>
+ </head>
+ <body>
+	<div id="txtBox">
+		<img src="images/txt0.png" alt="">
+		<img src="images/txt1.png" alt="">
+		<img src="images/txt2.png" alt="">
+		<img src="images/txt3.png" alt="">
+		<img src="images/txt4.png" alt="">
+		<img src="images/txt5.png" alt="">
+		<img src="images/txt6.png" alt="">
+		<img src="images/txt7.png" alt="">
+		<p class="blind">텍스트</p>
+	</div>
+ </body>
+</html>

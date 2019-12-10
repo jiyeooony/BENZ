@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title> Models : 메르세데스-벤츠 </title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/sub1.css">
+    <link rel="stylesheet" href="../assets/css/jiyeon.css">
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <!-- <link rel="stylesheet" href="assets/css/써야할CSS.css"> -->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $btnEle = $('.btn li');
+            var $big = $('.big');
+
+            $btnEle.children().on('click', function () {
+                var hTxt = $(this).children().attr('alt');
+                var bigSrc = $(this).data('src');
+                var bigAlt = $(this).data('alt');
+                console.log(hTxt, bigSrc, bigAlt);
+                $big.find('.blind').text(hTxt).next().attr({src: bigSrc, alt: bigAlt});
+            });
+
+            //슬라이더
+            $('#insideSlider .visual').bxSlider({
+                auto: true,     //false(기본값), 자동실행을 원하면 추가
+                pause: 10000,    //4000(4초 기본값), 1초 = 1000
+                ariaLive: true,     //스크린리더 사용자에게 변경된 정보를 알릴지 여부
+                ariaHidden: true,   //보여지는 슬라이더 내용인지 여부
+                autoHover: true,
+                controls: false
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="skip">
+        <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="wrap">
+        <h1 class="logo p_a">
+            <a href="../index.html"><img src="../assets/images/common/logo.png" alt="벤츠"></a>
+        </h1>
+        <!-- 상단바 -->
+        <div class="hearderwrap borderbox">
+            <header id="header">
+                <nav id="gnb">
+                    <ul>
+                        <li class="borderbox">
+                            <a href="../model/class.html" onmouseover='this.innerHTML="모델"' onmouseout='this.innerHTML="Models"'>Models</a>
+                            <ul class="dep2_1">
+                                <li><a href="../model/class.html">Class 전체보기</a></li>
+                                <li><a href="">S-Class</a></li>
+                                <li><a href="">E-Class</a></li>                            
+                                <li><a href="">C-Class</a></li>
+                                <li><a href="">A-Class</a></li>
+                                <li><a href="">B-Class</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../promotion/promotion.html" onmouseover='this.innerHTML="프로모션"'
+                                onmouseout='this.innerHTML="Promotion"'>Promotion</a>
+                            <ul class="dep2_2">
+                                <li><a href="../promotion/promotion.html">진행중인 프로모션</a></li>
+                                <li><a href="">이벤트</a></li>
+                                <li><a href="">구매혜택</a></li>
+                                <li><a href="">리스 안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../amg/amg.html">AMG</a>
+                        </li>
+                        <li>
+                            <a href="../map/map.html" onmouseover='this.innerHTML="딜러 &amp 센터"'
+                                onmouseout='this.innerHTML="Dealer &amp; center"'>Dealer &amp; center</a>
+                        </li>
+                        <li>
+                            <a href="../future/future.html">EQ future</a>
+                        </li>
+                        <li>
+                            <a href="../membership/membership.html" onmouseover='this.innerHTML="멤버십"'
+                                onmouseout='this.innerHTML="Membership"'>Membership</a>
+                            <ul class="dep2_3">
+                                <li><a href="../membership/membership.html">멤버십 Overview</a></li>
+                                <li><a href="">가입안내</a></li>
+                                <li><a href="">제휴 혜택안내</a></li>
+                                <li><a href="">제휴 신용카드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../introduce/introduce.html" onmouseover='this.innerHTML="회사소개"'
+                                onmouseout='this.innerHTML="Company"'>Company</a>
+                            <ul class="dep2_4">
+                                <li><a href="../introduce/introduce.html">메르세데스-벤츠 소개</a></li>
+                                <li><a href="">재무정보</a></li>
+                                <li><a href="">우리의 신념</a></li>
+                                <li><a href="">부정행위 신고</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../customer/customer.html" onmouseover='this.innerHTML="고객 서비스"'
+                                onmouseout='this.innerHTML="Customer Service"'>Customer Service</a>
+                            <ul class="dep2_5">
+                                <li><a href="../customer/customer.html">고객센터 Overview</a></li>
+                                <li><a href="">온라인 고객상담</a></li>
+                                <li><a href="">리콜정보</a></li>
+                                <li><a href="">하자 통보</a></li>
+                                <li><a href="">묻고 답하기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+            <!-- 본문 -->
+            <section id="content">
+                <div class="intro p_r">
+                    <div class="intro_bg9"></div>
+                    <div class="intro_txt p_a">
+                        <h2>Models</h2>
+                        <div></div>
+                        <p>모델에 대한 주요 설명과 <br>가격, 디자인, 안전성, 기능 <br>등을 살펴보실 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="md_info">
+                    <div class="area">
+                        <div class="class p_r">
+                            <ul>
+                                <li><a href="">S-Class</a></li>
+                                <li><a href="">C-Class</a></li>
+                                <li><a href="">E-Class</a></li>
+                            </ul>
+                            <svg class="arrow p_a" width="38" height="39">
+                                <path d="M0 0 L38 0 L19 39 Z" />
+                            </svg>
+                        </div>
+                        <ul class="info_btn">
+                            <li><a href="">Highlights</a></li>
+                            <li><a href="">가격</a></li>
+                            <li><a href="">디자인</a></li>
+                            <li><a href="">제원</a></li>
+                            <li><a href="">편리성</a></li>
+                            <li><a href="">Performance</a></li>
+                            <li><a href="">안전성</a></li>
+                            <li><a href="">TUIX</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <article class="info1">
+                    <!-- <iframe id="ytplayer" type="text/html" width="100%" height="930" src="https://www.youtube.com/embed/0BTf4-PYawk?autoplay=0&cc_load_policy=1&controls=0&fs=0&loop=1&modestbranding=1" title="S-Class 광고" allowfullscreen> -->
+                </article>
+                <article class="info2">
+                    <h1> Inside the Vehicle</h1>
+                    <div id="insideSlider">
+                        <ul class="visual">
+                            <li class="list1">
+                                <!-- 1920 배경이미지 처리 -->
+                                <div class="txt"><!-- display: table --><!-- table-cell -->
+                                    <strong>슬로 라이프(Slow Life)를 위한 <br> 최고의 세단</strong>
+                                    <p>세심하게 처리된 표면과 견고한 소재, <br>그리고 홀로그램을 보는 듯한 디스플레이가 <br>The Nes Mercedes-Bens S-Class Sedan의 <br>인테리어 디자인을 더욱 돋보이게 합니다.</p>
+                                    <a href="">
+                                        <span>더 보기</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="list2">
+                                <div class="txt">
+                                    <strong>최상의 안락함을 제공하는 공간</strong>
+                                    <p>탑승자에게 더욱 안락한 승차감을 제공합니다. <br>S-Class에서만 느낄 수 있는 특별한 편안함을 <br>약속합니다.</p>
+                                    <a href="">
+                                        <span>더 보기</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="list3">
+                                <div class="txt">
+                                    <strong>The New S-Class Sedan의 <br> 다채로운 기능</strong>
+                                    <p>센터 콘솔을 통해 The New S-Class Sedan의 <br>다채로운 기능을 확인할 수 있습니다. <br> 센터 콘솔은 실용적인 보관함이면서 동시에 다양한 <br>기능을 포함하고 있는 컨트롤 센터이기도 합니다.</p>
+                                    <a href="">
+                                        <span>더 보기</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="info3">
+                    <h1> Outside the Vehicle</h1>
+                    <div id="OutSlider">
+                        <ul class="exterior">
+                            <li class="list4">
+                                <div class="txt">
+                                    <strong>세련미가 묻어나는 럭셔리 디자인</strong>
+                                    <p>섬세한 라인과 디테일 요소들은 <br>S-Class Sedan의 매력을 두각시킵니다.</p>
+                                    <a href="">
+                                        <span>더 보기</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="list5">
+                                <div class="txt">
+                                    <strong>다이내믹함에 더해진 우아함</strong>
+                                    <p>더욱 커진 테일 파이프 트림과 <br>고급스러움을 더 해주는 크리스탈-룩 <br>LED 리어 램프가 시선을 사로잡습니다.</p>
+                                    <a href="">
+                                        <span>더 보기</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="list6">
+                                <div class="txt">
+                                    <strong>고급스러운 라인으로 완성된 외관 디자인</strong>
+                                    <p>고급스러운 돔 형태의 다이내믹한 루프라인은 <br>내부의 넓은 공간을 제공해주며, 외관상으로도 <br>당당한 분위기를 표현하며, 스포티한 범퍼는 <br>아름다운 자태에 매력을 더하는 요소입니다.</p>
+                                    <a href="">
+                                        <span>더 보기</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="info4">
+                    <h1> Magic Body Control</h1>
+                    <div id="bodysideSlider">
+                        <ul class="tech1">
+                            <li>
+                                <div class="txt">
+                                    <strong>최고 수준의 승차감 선사</strong>
+                                    <p>매직 바티 컨트롤(MAGIC BODY CONTROL)은 <br>카메라 영상과 주행 상태 정보를 기반으로 노면 <br>상태를 사전에 감지하고 이에 맞게 서스펜션을 <br>조정하는 기능입니다.</p>
+                                    <a href="">
+                                        <span>더 보기</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <h1> COMAND Online</h1>
+                    <div id="bodysideSlider">
+                        <ul class="tech1">
+                            <li>
+                                <div class="txt">
+                                    <strong>최상의 컨트롤 센터</strong>
+                                    <p>운행에 필요한 모든 정보, 통신, <br>엔터테인먼트를 제공하는 기능입니다. <br>커맨드 온라인(COMAND Online)의 조작과 <br>디스플레이 시스템을 통해 내비게이션, 전화, <br>오디오, 비디오, 인터넷 등 모든 미디어를 <br>사용 및 조작할 수 있습니다.</p>
+                                    <a href="">
+                                        <span>더 보기</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <h1> Multibeam LEDl</h1>
+                    <div id="bodysideSlider">
+                        <ul class="tech1">
+                            <li>
+                                <div class="txt">
+                                    <strong>주행상황에 맞는 최적의 조명이 <br>비춰집니다.</strong>
+                                    <p>84개의 LED가 개별적으로 작동하며 <br>이를 제어하는 4개의 컨트롤 유닛이 <br>주행상황에 적절하게 빛을 조정합니다.</p>
+                                    <a href="">
+                                        <span>더 보기</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="color">
+                    <div id="colorGallery">
+                        <h3>COLOR</h3>
+                        <ul class="btn">
+                            <li>
+                                <button type="button" data-src="../assets/images/models/C1-1_Mag_B.jpg" data-alt="">
+                                    <img src="../assets/images/models/C1_Mag_B.jpg" alt="">
+                                    <span>Magnetite Black<br>(마그네타이트 블랙)</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" data-src="../assets/images/models/C2-1_Obs_B.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C2_Obs_B.jpg" alt=""></button>
+                            </li>
+                            <li>
+                                <button type="button" data-src="../assets/images/models/C3-1_Ara_S.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C3_Ara_S.jpg" alt=""></button>
+                            </li>
+                            <li>
+                                <button type="button" data-src="../assets/images/models/C4-1_Iri_S.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C4_Iri_S.jpg" alt=""></button>
+                            </li>
+                            <li>
+                                <button type="button" data-src="../assets/images/models/C5-1_Cav_Bl.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C5_Cav_Bl.jpg" alt=""></button>
+                            </li>
+                            <li>
+                                <button type="button" data-src="../assets/images/models/C6-1_Ru_B.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C6_Ru_B.jpg" alt=""></button>
+                            </li>
+                            <li>
+                                <button type="button" data-src="../assets/images/models/C7-1_Dia_S.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C7_Dia_S.jpg" alt=""></button>
+                            </li>
+                            <li>
+                                <button type="button" data-src="../assets/images/models/C8-1_Eme_G.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C8_Eme_G.jpg" alt=""></button>
+                            </li>
+                            <li>
+                                <button type="button" data-src="../assets/images/models/C9-1_Sel_Gray.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C9_Sel_Gray.jpg" alt=""></button>
+                            </li>
+                            <li>
+                                <button type="button" data-src="../assets/images/models/C10-1_Ant_Bl.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C10_Ant_Bl.jpg" alt=""></button>
+                            </li>
+                        </ul>
+                        <div class="big">
+                            <h4 class="blind"></h4>
+                            <img src="../assets/images/models/C1-1_Mag_B.jpg" alt="">
+                        </div>
+                    </div>
+                </article>
+                <div class="link">
+                    <a href="">
+                        <span>가격보기</span>
+                    </a>
+                    <a href="">
+                        <span>시승 예약하기</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 푸터 -->
+            <footer id="footer" class="p_r">
+                <h1 class="logo p_a">
+                    <img src="../assets/images/common/benz_type.png" alt="벤츠">
+                </h1>
+                <div class="leftFooter p_r">
+                    <ul class="p_a">
+                        <li>ⓒ2019 메르세데스-벤츠 코리아(주)</li>
+                        <li>메르세데스-벤츠 파이낸셜 서비스 코리아 (주)</li>
+                        <li>다임러 트럭 코리아(주)</li>
+                        <li>메르세데스-벤츠 모빌리티 코리아(주)</li>
+                    </ul>
+                    <address class="p_a">서울특별시 중구 한강대로 416 서울스퀘어 8, 9 10 층</address>
+                </div>
+                <div class="rightFooter p_r">
+                    <ul class="p_a">
+                        <li>고객센터</li>
+                        <li>대표전화 080-001-1886</li>
+                        <li>팩스 0504-841-6217</li>
+                        <li>24시간 안내</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

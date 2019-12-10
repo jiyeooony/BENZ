@@ -1,0 +1,170 @@
+@charset "utf-8";
+@font-face{ 
+    font-family: 'GGBatangB';
+    src: url(../fonts/GyeonggiBatangB.eot);
+    src: local("※"),
+    url(../fonts/GyeonggiBatangB.woff) format("woff"), 
+    url(../fonts/GyeonggiBatangB.ttf) format("truetype"); 
+    font-weight: 700; 
+}
+@font-face{
+    font-family: 'SCDream';
+    src: url(../fonts/SCDream1.eot);
+    src: local("※"),
+    url(../fonts/SCDream1.woff2) format("woff2"),
+    url(../fonts/SCDream1.woff) format("woff"),
+    url(../fonts/SCDream1.otf) format("opentype");
+    font-weight: 100;
+}
+@font-face{
+    font-family: 'SCDream';
+    src: url(../fonts/SCDream2.eot);
+    src: local("※"),
+    url(../fonts/SCDream2.woff2) format("woff2"),
+    url(../fonts/SCDream2.woff) format("woff"),
+    url(../fonts/SCDream2.otf) format("opentype");
+    font-weight: 200;
+}
+@font-face{
+    font-family: 'SCDream';
+    src: url(../fonts/SCDream3.eot);
+    src: local("※"),
+    url(../fonts/SCDream3.woff2) format("woff2"),
+    url(../fonts/SCDream3.woff) format("woff"),
+    url(../fonts/SCDream3.otf) format("opentype");
+    font-weight: 300;
+}
+@font-face{
+    font-family: 'SCDream';
+    src: url(../fonts/SCDream4.eot);
+    src: local("※"),
+    url(../fonts/SCDream4.woff2) format("woff2"),
+    url(../fonts/SCDream4.woff) format("woff"),
+    url(../fonts/SCDream4.otf) format("opentype");
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'SCDream';
+    src: url(../fonts/SCDream5.eot);
+    src: local("※"),
+    url(../fonts/SCDream5.woff2) format("woff2"),
+    url(../fonts/SCDream5.woff) format("woff"),
+    url(../fonts/SCDream5.otf) format("opentype");
+    font-weight: 500;
+}
+@font-face{
+    font-family: 'SCDream';
+    src: url(../fonts/SCDream6.eot);
+    src: local("※"),
+    url(../fonts/SCDream6.woff2) format("woff2"),
+    url(../fonts/SCDream6.woff) format("woff"),
+    url(../fonts/SCDream6.otf) format("opentype");
+    font-weight: 600;
+}
+@font-face{
+    font-family: 'SCDream';
+    src: url(../fonts/SCDream7.eot);
+    src: local("※"),
+    url(../fonts/SCDream7.woff2) format("woff2"),
+    url(../fonts/SCDream7.woff) format("woff"),
+    url(../fonts/SCDream7.otf) format("opentype");
+    font-weight: 700;
+}
+@font-face{
+    font-family: 'SCDream';
+    src: url(../fonts/SCDream8.eot);
+    src: local("※"),
+    url(../fonts/SCDream8.woff2) format("woff2"),
+    url(../fonts/SCDream8.woff) format("woff"),
+    url(../fonts/SCDream8.otf) format("opentype");
+    font-weight: 800;
+}
+@font-face{
+    font-family: 'SCDream';
+    src: url(../fonts/SCDream9.eot);
+    src: local("※"),
+    url(../fonts/SCDream9.woff2) format("woff2"),
+    url(../fonts/SCDream9.woff) format("woff"),
+    url(../fonts/SCDream9.otf) format("opentype");
+    font-weight: 900;
+}
+@font-face{
+    font-family: 'AudreyR';
+    src: url(../fonts/Audrey-Normal.otf);
+    src: local("※"),
+    url(../fonts/Audrey-Normal.otf) format("opentype");
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'AudreyL';
+    src: url(../fonts/Audrey-Medium.otf);
+    src: local("※"),
+    url(../fonts/Audrey-Medium.otf) format("opentype");
+    font-weight: 500;
+}
+
+
+/* tag reset */
+body, ul, h1, h2, h3, h4, h5, h6, p, button{margin: 0; padding: 0;}
+ul{list-style: none;}
+a:link, a:visited, a:hover, a:active{color: inherit; text-decoration: none;}
+img{vertical-align: top; border: none;}
+address{font-style: normal;}
+header, nav, section, article, footer{display: block;}
+
+/* common class */
+.f_l{float: left;}
+.f_r{float: right;}
+.p_r{position: relative;}
+.p_a{position: absolute;}
+.clearfix:after{content: ""; display: block; clear: both;}
+.blind{position: absolute; top: 0; left: -9999px;}
+.borderbox{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.area{position: relative; width: 1600px; margin: 0 auto;}
+
+/* skip nav */
+#skip a{position: absolute; top: 0;left: -9999px; z-index: 1000;}
+#skip a:focus{left: 0; width: 100%; height: 40px; line-height: 40px; text-align: center; background: #424242; color: #fff;}
+
+body{font-family: 'SCDream', 'GGBatangB';font-size: 16px; color: #333; line-height: 1; font-weight: 200;}
+#wrap{max-width: 1920px; min-width: 1600px;}
+
+/* header */
+#header{position: relative; height: 100px; color: #fff; background: #1e1e1e; z-index: 300;}
+#header.active #gnb:after{content: ""; position: absolute; top: 80px; right: 0; width: 1300px; height: 220px; background:url(../images/common/dep2_bg.jpg) no-repeat; box-shadow: 2px 2px 10px #424242; z-index: 200;}
+.logo{left: 160px; width: 72px; height: 70px; top: 15px; z-index: 350;}
+
+#gnb{position: fixed; right: 0; top: 0; min-width: 1920px; height: 60px; line-height: 60px; padding-top: 20px; text-align: right; font-family: 'SCDream'; font-weight: 300; background: #1e1e1e;}
+#gnb > ul > li{position: relative; display: inline-block; font-size: 16px; margin-left: 40px;}
+#gnb > ul > li:nth-child(1){width: 54px;}
+#gnb > ul > li:nth-child(2){width: 77px;}
+#gnb > ul > li:nth-child(3){width: 37px;}
+#gnb > ul > li:nth-child(4){width: 116px;}
+#gnb > ul > li:nth-child(5){width: 71px;}
+#gnb > ul > li:nth-child(6){width: 93px;}
+#gnb > ul > li:nth-child(7){width: 72px;}
+#gnb > ul > li:nth-child(8){padding-right:200px; width: 133px;}
+#gnb > ul > li > a{position: relative; display: block; text-align: center;}
+#gnb > ul > li > a:after{content: ""; position: absolute; top: 54.5px; left: -50px; width: 0; height: 5px; z-index: -1; background: transparent; transform: scale(1); -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}
+#gnb > ul > li:hover > a:after, #gnb > ul > li > a:focus:after, #gnb > ul > li.on > a:after{width: 120%; color: #5a90d6;  background-color: #5a90d6; left: -10%;}
+
+#gnb ul li ul{position: absolute; top: 60px; left: 0; width: 350px; line-height: 45px; font-size: 14px; z-index: 250;}
+#gnb ul li ul li{float: left; color: #333; text-align: left; margin-left: -40px;}
+#gnb ul li ul li:first-child{width: 200%; padding-top: 10px; font-size: 16px; font-weight: 500; line-height: 55px;}
+#gnb ul li ul li:nth-child(2){width: 50%;}
+#gnb ul li ul li:nth-child(3){width: 50%;}
+#gnb ul li ul li:nth-child(4){width: 50%;}
+#gnb ul li ul li:nth-child(5){width: 50%;}
+#gnb ul li ul li:nth-child(6){width: 50%;}
+
+#gnb ul li ul li a{position: relative;}
+#gnb ul li ul li:hover a, #gnb ul li ul li a:focus{color: #5a90d6;}
+#gnb ul li ul li a:after{content: ""; position: absolute; top: 0px; right: 0px; width: 0px; height: 0px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; border: 4px solid transparent; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s;}
+#gnb ul li ul li:hover a:after, #gnb ul li ul li a:focus:after{width: 5px; height: 5px; top: -5px; right: -17px; border: 4px solid #5a90d6;}
+
+/* footer */
+#footer{padding-top: 10px; height: 200px; font-size: 14px; line-height: 1.4; font-family: 'SCDream'; background: #1e1e1e; color: #fff;}
+#footer .logo{top: 30px; left: 200px;}
+#footer .leftFooter ul{top: 70px; left: 200px; width: 70%; height: 80px;}
+#footer .rightFooter ul{top: 25px; right: 200px; width: 200px; height: 60px; line-height: 2;}
+#footer address{top: 160px; left: 200px; width: 70%;}

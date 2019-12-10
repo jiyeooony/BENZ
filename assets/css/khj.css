@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* 공통 */
+.i_b{display: inline-block;}
+.l_pad163{padding-left: 163px;}
+.line_bg, .line_bg2{position: relative;}
+.line_bg:after{content:"";position: absolute;bottom: -6px;left: 0;width: 100%;padding-right: 50px;height: 27px;background:#e9e9e9 url("../images/introduce/bg_line.gif") no-repeat right top;z-index: -1;}
+
+.sub_tit{font-size: 40px;text-align: left;}
+.highlight{height: 30px;margin-top:47px;font-size: 30px;}
+.cnt p{font-size: 15px;line-height: 30px;}
+.txt_line{border-bottom: 11px solid #e9e9e9;padding-bottom: 49px;margin-bottom: 49px;}
+
+/* 회사소개 */
+.company_btn{height: 120px;text-align: center;font-weight: 400;margin-bottom: 130px;}
+.company_btn li{display: inline-block;padding: 0 20px 11px;}
+.company_btn li:nth-child(2){margin-left: 307px;margin-right: 324px;}
+.company_btn li.on{border-bottom: 3px solid #2b2b2b;color:#2b2b2b;font-weight: 500;}
+.company .highlight{margin-bottom: 69px;}
+
+/* 혁신 */
+.inno{width: 1270px;}
+.inno .inno1{margin-bottom: 67px;}
+.inno .inno1 .highlight{margin-bottom: 27px;letter-spacing: -2.7px;}
+.inno .inno2{margin-bottom: 70px;}
+.inno .inno2 .highlight{margin-bottom: 41px;}
+
+/* 디자인 */
+.l_pad3 .sub_tit3{font-size: 40px;padding-left: 187px;width: 637px;height: 38px;}
+.ds_1{width: 1596px;height: 779px;margin-left: 162px;margin-top: 84px;}
+.highlight3{width: 504px;height: 29px;font-size: 30px;margin-left: 186px;}
+.highlight3{font-size: 15px;margin-left: 188px;}
+.l_pad3 p{width: 772px;height: 282px;font-size: 15px;margin-left: 188px;line-height: 38px;}
+.highlight4{width: 169px;height: 24px;border-bottom: 10px solid #e9e9e9;width: 215px;height: 27px;font-size: 30px;}
+.l_pad4 p{width: 583px;height: 226px;text-align: right;font-size: 15px;margin-right: 43px;line-height: 35px;}
+.ds_2{height: 587px;width: 1008px;margin-right: 163px;}
+.highlight5{font-size: 30px;width: 475px;height: 35px;border-bottom: 10px solid #e9e9e9;}
+.l_pad5 p{width: 590px;height: 261px;text-align-last: left;font-size: 15px;line-height: 35px;}
+.ds_3{width: 946px;height: 587px;margin: 162px;}

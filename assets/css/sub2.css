@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+/* tag reset */
+body ,img, h1, h2, h3, h4, h5, p {margin: 0; padding: 0;}
+ul{list-style: none;}
+a:link, a:visited, a:hover, a:active{color: inherit; text-decoration: none;}
+img{border: none; vertical-align: top;}
+button{border: none; background: none; cursor: pointer; font-family: inherit; color: inherit; font-size: inherit;}
+header, nav, section, article, footer{display: block;}
+body{overflow-x: hidden;}
+
+/* 배경 */
+/* #header {position: relative ; padding-top: 50px;height: 100px;background: black;} */
+
+/* 이미지 alt 대신 블라인드 */
+.blind{font-size: 0;line-height: 0;width: 1px;height: 1px;overflow: hidden;position: absolute;top: 0;left: -9999px;}
+
+/* 최상단 글자 이미지 편집 */
+
+/* #header .maintxt img {opacity: 0; } 이미지 투명처리 */
+#header .maintxt img {opacity: 0; }
+#header img{position: absolute; z-index: 1000; } 
+
+.eq_headline{position: fixed; top: 0; left: 0; width: 100%; height: 80px; background: rgba(0,0,0,.8); z-index: 500;}
+.eq_headline .benz_logo{float: left; margin-top: 17.5px; margin-left: 160px;}
+
+#header .maintxt .T, #header .maintxt .H {top: 300px; left: 500px;}
+#header .maintxt .P, #header .maintxt .E {top: 410px; left: 700px;}
+#header .maintxt .benzName {top: 500px; left:820px;}
+
+#header .maintxt .redUnderline{width: 198px; position: relative; top: 558px; left:853px;}
+#header .maintxt .redUnderline p{width: 0px;height: 1.5px; position: absolute;background: rgb(214, 52, 52); z-index: 2000;
+    animation: redUnderline forwards 1s cubic-bezier(0.22, 0.61, 0.36, 1) 5.0s;
+    /* transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); */
+}
+#header .maintxt .redUnderline .left{right:99px;}
+#header .maintxt .redUnderline .right{left:99px;}
+@keyframes redUnderline{
+    0%{width: 0;}
+    100%{width: 99px;}
+}
+/* #header .maintxt .benzName:after{width: 100%} */
+#header .maintxt .OA{top: 590px; left: 760px;}
+#header .maintxt .YC{top: 587px; left: 954px;}
+
+/* 동영상 크기조절 */
+.video{position: absolute; top: -50px; left: 0; width: auto; height: auto; min-width: 100%; min-height: 100%; z-index: -1;}
+
+/* content - amg 글씨 동작 없음 */
+#wrap .amgName{top: 1300px;}
+
+/* content -the past */
+#wrap .amgPic1{top:1500px;}
+#wrap .amgPic1_2{top:2255px;}
+
+/* content - the future */
+#wrap .amgPic2{top:2700px;}
+#wrap .amgPic2_2{top:3500px;}
+
+/* amg 글자 애니메이션 편집 */
+#wrap .Title_P {position: relative; opacity: 1; letter-spacing: 4px; padding-top: 2240px; padding-left: 1330px; font-family: AudreyR; font-weight: 100; font-size: 40px; height: 60px; z-index: 2000; margin: 0;}
+#wrap .P_c{position: relative; opacity: 1; padding-top:40px ; padding-left: 980px; font-family: SCDream; font-weight: 300; font-size: 24px; height: 60px; z-index: 2001; margin: 0;}
+
+ 
+#wrap .Title_P {
+  position: relative;
+  width: calc(100% - 200px);
+  color: #FFF;
+  text-align: center;
+  letter-spacing: 4px; padding-top: 2240px; padding-left: 330px; font-family: AudreyR; font-weight: 100; font-size: 40px; height: 60px; z-index: 3000; margin: 0;
+  /* letter-spacing: 4px; padding-top: 2240px; padding-left: 1330px; font-family: AudreyR; font-weight: 100; font-size: 40px; height: 60px; z-index: 2000; margin: 0; */
+}
+
+#wrap .Title_P label {
+  opacity: 1;
+  display:inline-block;
+  /* letter-spacing: 4px; padding-top: 940px; padding-left: 130px; font-family: AudreyR; font-weight: 100; font-size: 40px; height: 60px; z-index: 2000; margin: 0; */
+  /* letter-spacing: 4px; padding-top: 2240px; padding-left: 1330px; font-family: AudreyR; font-weight: 100; font-size: 40px; height: 60px; z-index: 2000; margin: 0; */
+}
+  /* .progress-container label {
+    display:inline-block;
+  } */
+  
+  @keyframes anim {
+    0% {
+      opacity: 0;
+      transform: translateX(-300px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+
+
+
+
+/* Map */
+/* 버튼 */
+/* #map{b;} */
+button{border: none;background: none;cursor: pointer;font-family: inherit;color: inherit;font-size: inherit; outline: 0;}   /*outline: 0; => 버튼 테두리 효과 제거*/
+#map .mapBtn1{text-align: center;}/* 가운데정렬 */
+#map .mapBtn1 li {display: inline-block;}/* 가운데정렬 */
+#map .mapBtn1 li {border: 1px solid #2A2A2A;background: #2A2A2A; width:535px;height:50px;line-height: 50px; color: white; margin-bottom: 5px; font-style: initial;font-weight:500;}
+#map .mapBtn1 li a:hover{color: #03A5E0;}
+#map .mapBtn1 > li:nth-child(1){color: #03A5E0;}
+
+#map .mapBtn2{text-align: center;}/* 가운데정렬 */
+#map .mapBtn2 li {display: inline-block;}/* 가운데정렬 */
+#map .mapBtn2 li button{border: 1px solid #575353;background: #575353; width:78.5px;height:50px; color: white; margin-bottom: 5px;}
+#map .mapBtn2 li.on button{color: #03A5E0;}
+#map .mapBtn2 li button:hover{color: #03A5E0;}
+
+#map .result{text-align: center;}/* 가운데정렬 */
+#map .result .address{display: inline-block; position:relative; width:267px;height:560px; border: 1px solid #2A2A2A; margin-bottom: 50px; background: #2A2A2A;}
+#map .result .mapImg{display: inline-block; position:relative; width:800px;height:560px; border: 1px solid #2A2A2A; margin-bottom: 50px;background:#2A2A2A;}
+#map .result .mapImg img{position: absolute;top:10%;left:50%; transform:translateX(-50%);}
+/* 선택한 주소만 보이기 */
+#map .result .address .addList li .txt{display: none;}
+#map .result .address .addList li.on .txt{display: inline-block;position:absolute; left:50%; transform:translateX(-50%); color: black;width:267px;}/* 가운데정렬 */
+
+#map .result .address .addList li .txt li button{color: white;margin-top: 10px;}
+#map .result .address .addList li .txt li.on button{color: #03A5E0;}
+#map .result .address .addList li .txt li button:hover{color: #03A5E0;}
+
+
+#map .result .add_detail{display: inline-block; position:relative; width:1200px;height:560px; border: 1px solid #2A2A2A; margin-bottom: 50px;background:#2A2A2A;}
+#map .result .add_detail li {display: none;}
+#map .result .add_detail li.on {display: inline-block;position: relative;color: white;}
+
