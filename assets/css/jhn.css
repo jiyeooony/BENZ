@@ -3,7 +3,18 @@
 /* 헤더 네비게이션 */
 .eq_headline{position: fixed; top: 0; left: 0; width: 100%; height: 80px; background: rgba(0,0,0,.8); z-index: 500;}
 .eq_headline .benz_logo{float: left; margin-top: 17.5px; margin-left: 160px;}
-.eq_headline .eq_logo{float: right; margin-top: 17.5px; margin-right: 160px;}
+.eq_headline .eq_logo{display: block;}
+
+.eq_skip_poab{top: 20px; left: 50%; height: 80px; margin-left: -350px;}
+.eq_headline .eq_skiplist{padding-top: 17.5px; padding-right: 150px; width: 700px; height: 45px; text-align: right; font-family: AudreyR; color: #fff; letter-spacing: 5px;}
+.eq_headline .eq_skiplist li a{display: block; padding-right: 10px; line-height: 50px; font-size: 22px;}
+.eq_headline .eq_skiplist li a:hover, .eq_headline .eq_skiplist ul li a:focus{font-weight: 600; color: #5a90d6;}
+.eq_headline .eq_skiplist li a img, .eq_headline .eq_skiplist ul li a img{position: relative;}
+.eq_headline .eq_skiplist li:hover a img, .eq_headline .eq_skiplist li a:focus img{transform: translateX(-30px);}
+.eq_headline .eq_skiplist li a:after{content: ""; position: absolute; width: 12px; height: 12px; top: 30px; right: 120px; background: url(../images/future/eq_nav.png) no-repeat center; z-index: 300; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'; opacity: 0;}
+.eq_headline .eq_skiplist:hover li a:after, .eq_headline .eq_skiplist li a:focus:after{-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)'; opacity: 1; right: 145px;}
+.eq_headline .eq_skiplist, .eq_headline .eq_skiplist li a, .eq_headline .eq_skiplist li a img, .eq_headline .eq_skiplist li a:after{overflow: hidden; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}
+
 
 /* 인트로 */
 #intro .video{width: 100%; height: auto;}
@@ -12,12 +23,17 @@
 
 #content .eq_article{width: 100%; height: 1600px;}
 #content article:nth-child(5){height: 1800px !important;}
-#content .eq_article .eq_pic1 , #content .eq_article .eq_pic2, #content .eq_article .eq_pic3, #content .eq_article .eq_pic4{width: 100%; height: 900px; overflow: hidden;}
-#content .eq_article .eq_pic1 span, #content .eq_article .eq_pic2 span, #content .eq_article .eq_pic3 span, #content .eq_article .eq_pic4 span{width: 100%; height: 900px; display: block; background: no-repeat fixed center;}
-#content .eq_article .eq_pic1 span{background-image: url(../images/future/overview_bg.jpg);}
-#content .eq_article .eq_pic2 span{background-image: url(../images/future/eqc.jpg);}
-#content .eq_article .eq_pic3 span{background-image: url(../images/future/volocopter.jpg);}
-#content .eq_article .eq_pic4 span{background-image: url(../images/future/formular_e.jpg);}
+#content .eq_article .eq_pic1, #content .eq_article .eq_pic2, #content .eq_article .eq_pic3, #content .eq_article .eq_pic4{width: 100%; height: 900px; background: no-repeat fixed center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+#content .eq_article .eq_pic1{background-image: url(../images/future/overview_bg.jpg);}
+#content .eq_article .eq_pic2{background-image: url(../images/future/eqc.jpg);}
+#content .eq_article .eq_pic3{background-image: url(../images/future/volocopter.jpg);}
+#content .eq_article .eq_pic4{background-image: url(../images/future/formular_e.jpg);}
+
+#content .eq_article .eq_pic5{width: 1680px; height: 945px; top: 0; left: 0; background: url(../images/future/eq_space.jpg); z-index: 100; -webkit-border-radius: 0 0 45px 0; -moz-border-radius: 0 0 45px 0; border-radius: 0 0 45px 0;}
+#content .eq_article .eq_pic_bg_3rd{width: 1100px; height: 1400px; top: 0; right: 0; z-index: 50; background: #424242; -webkit-border-radius: 0 0 0 45px; -moz-border-radius: 0 0 0 45px; border-radius: 0 0 0 45px;}
+#content .eq_article .eq_pic_bg_3rd h2{margin: 980px 0 60px 60px; line-height: 1.7;}
+#content .eq_article .eq_pic_bg_3rd p{margin: 100px 0 60px 60px; color: #fff; line-height: 2.5;}
+
 #content .eq_article .eq_pic_bg_odd, #content .eq_article .eq_pic_bg_even{width: 100%; height: 360px;}
 #content .eq_article .eq_pic_bg_odd{background: url(../images/future/eq_1_bt.png);}
 #content .eq_article .eq_pic_bg_even{background: url(../images/future/eq_2_bt.png);}

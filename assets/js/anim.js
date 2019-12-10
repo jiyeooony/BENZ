@@ -74,3 +74,14 @@ $(document).ready(function() {
 		$(".Title_P label:nth-child("+index+")").css( "-animation", "anim 3s "+time+"ms " );
 	}
 })
+
+var $win = $(window);
+var $slide = $("#wrap .slide");
+var liSize = parseInt($slide.children().css("width"));
+/* 스크롤에 따라 애니메이션 효과 */
+$win.on("scroll", function(){
+    var scrollT = $wind.scrollTop();
+    var topPos = $slide.offset().top;
+
+    if (scrollT > topPos -500) $slide.addClass("on");
+})
