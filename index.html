@@ -13,7 +13,31 @@
     <![endif]-->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/fullpage.min.js"></script>
+    <script src="assets/js/jquery.bxslider.min.js"></script>
+    <script src="assets/js/future.js"></script>
     <script src="assets/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Mercedes-Benz', 'S-Class', 'E-Class', 'C-Class', '주요 서비스'],
+                scrollBar: true
+            });
+            $('#idxSlider .idx_visual').bxSlider({
+                mode: 'fade',
+                auto: true,
+                pause: 5000,
+                autoControls: true,
+                airaLive: true,
+                airaHidden: true,
+                prevText: '이전 슬라이더 보기',
+                nextText: '다음 슬라이더 보기',
+                startText: '애니메이션 시작',
+                stopText: '애니메이션 정지'
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -21,20 +45,23 @@
         <a href="#fullpage">본문 바로가기</a>
     </div>
     <div id="wrap">
-        <!-- 상단바 -->
         <div class="hearderwrap borderbox">
             <header id="header">
-                <h1 class="logo p_a">
-                    <a href="index.html"><img src="assets/images/common/logo.png" alt="벤츠"></a>
-                </h1>
+                <div>
+                    <h1 class="logo p_a">
+                        <a class="benz_logo" href="index.html"><img src="assets/images/common/logo.png"
+                                alt="벤츠"></a>
+                    </h1>
+                </div>
                 <nav id="gnb">
                     <ul>
                         <li class="borderbox">
-                            <a href="model/class.html" onmouseover='this.innerHTML="모델"' onmouseout='this.innerHTML="Models"'>Models</a>
+                            <a href="model/class.html" onmouseover='this.innerHTML="모델"'
+                                onmouseout='this.innerHTML="Models"'>Models</a>
                             <ul class="dep2_1">
                                 <li><a href="model/class.html">Class 전체보기</a></li>
                                 <li><a href="">S-Class</a></li>
-                                <li><a href="">E-Class</a></li>                            
+                                <li><a href="">E-Class</a></li>
                                 <li><a href="">C-Class</a></li>
                                 <li><a href="">A-Class</a></li>
                                 <li><a href="">B-Class</a></li>
@@ -51,7 +78,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="amg/amg.html" onmouseover='this.innerHTML="AMG"' onmouseout='this. innterHTML="AMG"'>AMG</a>
+                            <a href="amg/amg.html">AMG</a>
                         </li>
                         <li>
                             <a href="map/map.html" onmouseover='this.innerHTML="딜러 &amp 센터"'
@@ -95,36 +122,149 @@
                 </nav>
             </header>
         </div>
+        <a id="circle" class="btn_top" role="button" href="">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3">TOP</div>
+        </a>
 
         <div id="fullpage">
-            <!-- 본문 -->
-            <section class="content">
-                본문내용
+            <section class="section p_r" id="cnt1">
+                <div id="idxSlider" class="p_r">
+                    <ul class="idx_visual">
+                        <li>
+                            <strong>Live Your Class</strong>
+                            <p>메르세데스-벤츠와 함께 당신의 클래스를 완성하세요</p>
+                            <a href="model/class.html">#Class</a>
+                        </li>
+                        <li>
+                            <strong>Experience the Future</strong>
+                            <p>미래 비전의 공간, EQ Future</p>
+                            <a href="future/future.html">#EQ Future</a>
+                        </li>
+                        <li>
+                            <strong>The World of Driving Performance</strong>
+                            <p>강렬하고 독보적인 퍼포먼스, AMG</p>
+                            <a href="amg/amg.html">#AMG</a>
+                        </li>
+                    </ul>
+                </div>
             </section>
 
-            <!-- 푸터 -->
-            <footer id="footer" class="p_r">
-                <h1 class="logo p_a">
-                    <img src="assets/images/common/benz_type.png" alt="벤츠">
-                </h1>
-                <div class="leftFooter p_r">
-                    <ul class="p_a">
-                        <li>ⓒ2019 메르세데스-벤츠 코리아(주)</li>
-                        <li>메르세데스-벤츠 파이낸셜 서비스 코리아 (주)</li>
-                        <li>다임러 트럭 코리아(주)</li>
-                        <li>메르세데스-벤츠 모빌리티 코리아(주)</li>
-                    </ul>
-                    <address class="p_a">서울특별시 중구 한강대로 416 서울스퀘어 8, 9 10 층</address>
+            <section class="section p_r" id="cnt2">
+                <div class="idx_pic1 fade p_a"></div>
+                <h2 class="p_a">S-Class</h2>
+                <div class="idx_txt_wrap p_a">
+                    <strong>누구에게 보여주기 위한 것이 아닙니다. <br>The New S-Class에게는 당연한 일입니다.</strong>
+                    <p>자원 절약의 필요성, 언제나 개선의 여지는 있다는 것. <br>절약과 부는 서로 대립하는 개념이 아니라 오히려 서로를 보완하는 개념이라는 사실.</p>
+                    <p>이런 당연한 것들처럼, The New S-Class가 최신형 엔진을 탑재했다는 <br>사실 또한 특별히 설명과 필요가 없는 일이겠지요.</p>
+                    <p>지상 최고의 지능형 기술을 갖춘 주행 보조 시스템을 탑재한 것도 당연하고요. <br>The New S-Class에는 몸과 마을을 사로잡을 감각적 자극들로 가득합니다.</p>
+                    <a class="borderbox p_a" href="model/class.html">더 보기</a>
                 </div>
-                <div class="rightFooter p_r">
-                    <ul class="p_a">
-                        <li>고객센터</li>
-                        <li>대표전화 080-001-1886</li>
-                        <li>팩스 0504-841-6217</li>
-                        <li>24시간 안내</li>
-                    </ul>
+                <div class="idx_pic_sub1 fade p_a"></div>
+            </section>
+
+            <section class="section p_r" id="cnt3">
+                <div class="idx_pic2 fade p_a"></div>
+                <h2 class="p_a">E-Class</h2>
+                <div class="idx_txt_wrap p_a">
+                    <strong>E-Class, 위대한 도약</strong>
+                    <p>긴 보닛, 치켜뜬 헤드램프, 좌우 양쪽에 자리한 커다란 흡기구로 더 두드러져 <br>보이는 앞 모습은 The E-Class의 세련된 스포티함을 말해줍니다.</p>
+                    <a class="borderbox p_a" href="model/class.html">더 보기</a>
                 </div>
-            </footer>
+                <div class="idx_pic_sub2 fade p_a"></div>
+            </section>
+
+            <section class="section p_r" id="cnt4">
+                <div class="idx_pic3 fade p_a"></div>
+                <h2 class="p_a">C-Class</h2>
+                <div class="idx_txt_wrap p_a">
+                    <strong>C-Class, 스포티함을 세련되게 재정의하다</strong>
+                    <p>The New C-Class 디자인의 감각적인 순수함은 보는 것만으로 운전의 기쁨을 <br>느끼게 해 줍니다. <br>그 감각적인 순수함은 벤츠의 디자이들로 하여금 그것을
+                        더욱
+                        최적화시키도록 <br>동기를 부여했습니다.</p>
+                    <p>새로운 조명 시스템, 최선의 감각의 에이프런, 게다가 새로운 색상과 재질은 <br>C-Class만이 보여주는 역동적이면서도 현대적인 자태를 더욱 돋보이게 해 줍니다.</p>
+                    <a class="borderbox p_a" href="model/class.html">더 보기</a>
+                </div>
+                <div class="idx_pic_sub3 fade p_a"></div>
+            </section>
+
+            <section class="section p_r" id="cnt5">
+                <ul class="idx_list p_a">
+                    <li>
+                        <!-- 초기 화면 -->
+                        <img src="assets/images/index/idx_btn_promotion.jpg" alt="">
+                        <!-- over시 보여질 내용 -->
+                        <div class="over">
+                            <h4>PROMOTION</h4> <!-- 처음부터 보여짐 -->
+                            <p>Mercedes-Benz <br>파이낸셜 서비스 코리아</p>
+                            <a href="">내게 맞는 프로모션</a>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- 초기 화면 -->
+                        <img src="assets/images/index/idx_btn_amg.jpg" alt="">
+                        <!-- over시 보여질 내용 -->
+                        <div class="over">
+                            <h4>AMG</h4> <!-- 처음부터 보여짐 -->
+                            <p>강력하고 독보적인 퍼포먼스를 <br>제공하는 것이 AMG의 목표 입니다</p>
+                            <a href="">더 알아보기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- 초기 화면 -->
+                        <img src="assets/images/index/idx_btn_location.jpg" alt="">
+                        <!-- over시 보여질 내용 -->
+                        <div class="over">
+                            <h4>LOCATION</h4> <!-- 처음부터 보여짐 -->
+                            <p>친절하고 편안한 서비스와 <br>완벽한 점검</p>
+                            <a href="">센터 검색</a>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- 초기 화면 -->
+                        <img src="assets/images/index/idx_btn_future.jpg" alt="">
+                        <!-- over시 보여질 내용 -->
+                        <div class="over">
+                            <h4>EQ FUTURE</h4> <!-- 처음부터 보여짐 -->
+                            <p>우리의 내일이 맑을 수 있도록, <br>미래 비전의 공간 <br>EQ Future</p>
+                            <a href="">더 알아보기</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="section fp-auto-height">
+                <footer id="footer" class="p_r">
+                    <div class="idx_foot_link">
+                        <ul>
+                            <li><a href="">시승 예약하기</a></li>
+                            <li><a href="">간편 견적</a></li>
+                            <li><a href="">온라인 구매상담</a></li>
+                        </ul>
+                    </div>
+                    <h1 class="logo p_a">
+                        <img src="assets/images/common/benz_type.png" alt="벤츠">
+                    </h1>
+                    <div class="leftFooter p_r">
+                        <ul class="p_a">
+                            <li>ⓒ2019 메르세데스-벤츠 코리아(주)</li>
+                            <li>메르세데스-벤츠 파이낸셜 서비스 코리아 (주)</li>
+                            <li>다임러 트럭 코리아(주)</li>
+                            <li>메르세데스-벤츠 모빌리티 코리아(주)</li>
+                        </ul>
+                        <address class="p_a">서울특별시 중구 한강대로 416 서울스퀘어 8, 9 10 층</address>
+                    </div>
+                    <div class="rightFooter p_r">
+                        <ul class="p_a">
+                            <li>고객센터</li>
+                            <li>대표전화 080-001-1886</li>
+                            <li>팩스 0504-841-6217</li>
+                            <li>24시간 안내</li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
         </div>
     </div>
 </body>

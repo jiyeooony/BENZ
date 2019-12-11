@@ -130,9 +130,9 @@ body{font-family: 'SCDream', 'GGBatangB';font-size: 16px; color: #333; line-heig
 #wrap{max-width: 1920px; min-width: 1600px;}
 
 /* header */
-#header{position: relative; height: 100px; color: #fff; background: #1e1e1e; z-index: 300;}
+#header{position: relative; height: 100px; color: #fff; background: #1e1e1e; z-index: 800;}
 #header.active #gnb:after{content: ""; position: absolute; top: 80px; right: 0; width: 1300px; height: 220px; background:url(../images/common/dep2_bg.jpg) no-repeat; box-shadow: 2px 2px 10px #424242; z-index: 200;}
-.logo{left: 160px; width: 72px; height: 70px; top: 15px; z-index: 350;}
+.logo{left: 160px; width: 72px; height: 70px; top: 15px; z-index: 1000;}
 
 #gnb{position: fixed; right: 0; top: 0; min-width: 1920px; height: 60px; line-height: 60px; padding-top: 20px; text-align: right; font-family: 'SCDream'; font-weight: 300; background: #1e1e1e;}
 #gnb > ul > li{position: relative; display: inline-block; font-size: 16px; margin-left: 40px;}
@@ -163,7 +163,7 @@ body{font-family: 'SCDream', 'GGBatangB';font-size: 16px; color: #333; line-heig
 #gnb ul li ul li:hover a:after, #gnb ul li ul li a:focus:after{width: 5px; height: 5px; top: -5px; right: -17px; border: 4px solid #5a90d6;}
 
 /* footer */
-#footer{padding-top: 10px; height: 200px; font-size: 14px; line-height: 1.4; font-family: 'SCDream'; background: #1e1e1e; color: #fff;}
+#footer{height: 200px; font-size: 14px; line-height: 1.4; font-family: 'SCDream'; background: #1e1e1e; color: #fff;}
 #footer .logo{top: 30px; left: 200px;}
 #footer .leftFooter ul{top: 70px; left: 200px; width: 70%; height: 80px;}
 #footer .rightFooter ul{top: 25px; right: 200px; width: 200px; height: 60px; line-height: 2;}

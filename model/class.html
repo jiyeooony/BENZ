@@ -29,7 +29,7 @@
             });
 
             //슬라이더
-            $('#insideSlider .visual').bxSlider({
+            $('#insideSlider .visual, #OutSlider .exterior, #bodysideSlider .tech').bxSlider({
                 auto: true,     //false(기본값), 자동실행을 원하면 추가
                 pause: 10000,    //4000(4초 기본값), 1초 = 1000
                 ariaLive: true,     //스크린리더 사용자에게 변경된 정보를 알릴지 여부
@@ -37,21 +37,18 @@
                 autoHover: true,
                 controls: false
             });
-            $('#OutSlider .exterior').bxSlider({
-                auto: true,     //false(기본값), 자동실행을 원하면 추가
-                pause: 10000,    //4000(4초 기본값), 1초 = 1000
-                ariaLive: true,     //스크린리더 사용자에게 변경된 정보를 알릴지 여부
-                ariaHidden: true,   //보여지는 슬라이더 내용인지 여부
-                autoHover: true,
-                controls: false
-            });
-            $('#bodysideSlider .tech').bxSlider({
-                auto: true,     //false(기본값), 자동실행을 원하면 추가
-                pause: 10000,    //4000(4초 기본값), 1초 = 1000
-                ariaLive: true,     //스크린리더 사용자에게 변경된 정보를 알릴지 여부
-                ariaHidden: true,   //보여지는 슬라이더 내용인지 여부
-                autoHover: true,
-                controls: false
+
+            //header 언어선택
+            $(".md_info .area .class ul li a").on("click", function () {
+                var $class = $(".md_info .area .class");
+                var idx = $(this).parent().index();
+
+                $(this).closest(".class").toggleClass("active");
+
+                if ($class.hasClass("active")) $class.children('ul').stop().animate({height:117}, "fast");
+                else $class.children('ul').stop().animate({height:39}, "fast");
+
+                return false;
             });
         });
     </script>
@@ -155,12 +152,12 @@
                                 <li><a href="">C-Class</a></li>
                                 <li><a href="">E-Class</a></li>
                             </ul>
-                            <!-- <svg class="arrow p_a" width="38" height="39">
+                            <svg class="arrow p_a" width="38" height="39">
                                 <path d="M0 0 L38 0 L19 39 Z" />
-                            </svg> -->
+                            </svg>
                         </div>
                         <ul class="info_btn">
-                            <li><a href="">Highlights</a></li>
+                            <li class="high"><a href="">Highlights</a></li>
                             <li><a href="">가격</a></li>
                             <li><a href="">디자인</a></li>
                             <li><a href="">제원</a></li>
@@ -172,10 +169,10 @@
                     </div>
                 </div>
                 <article class="info1">
-                    <!-- <iframe id="ytplayer" type="text/html" width="100%" height="930" src="https://www.youtube.com/embed/0BTf4-PYawk?autoplay=0&cc_load_policy=1&controls=0&fs=0&loop=1&modestbranding=1" title="S-Class 광고" allowfullscreen> -->
+                    <iframe id="ytplayer" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="S-Class 광고" width="100%" height="930" src="https://www.youtube.com/embed/0BTf4-PYawk?enablejsapi=1&amp;origin=https%3A%2F%2Fdevelopers-dot-devsite-v2-prod.appspot.com&amp;version=3&amp;autoplay=1&amp;mute=1&amp;cc_load_policy=1&amp;controls=0&amp;rel=0&amp;loop=10&amp;playerapiid=ytplayer&amp;widget_referrer=https%3A%2F%2Fdevelopers.google.com%2Fyoutube%2Fyoutube_player_demo&amp;widgetid=4"></iframe>
                 </article>
-                <article class="info2">
-                    <h1> Inside the Vehicle</h1>
+                <article class="info2 slider">
+                    <h3> Inside the Vehicle</h3>
                     <div id="insideSlider">
                         <ul class="visual">
                             <li class="list1">
@@ -183,8 +180,8 @@
                                 <div class="txt"><!-- display: table --><!-- table-cell -->
                                     <strong>슬로 라이프(Slow Life)를 위한 <br> 최고의 세단</strong>
                                     <p>세심하게 처리된 표면과 견고한 소재, <br>그리고 홀로그램을 보는 듯한 디스플레이가 <br>The Nes Mercedes-Bens S-Class Sedan의 <br>인테리어 디자인을 더욱 돋보이게 합니다.</p>
-                                    <a href="">더 보기</a>
                                 </div>
+                                <a href="">더 보기</a>
                             </li>
                             <li class="list2">
                                 <div class="txt">
@@ -203,69 +200,61 @@
                         </ul>
                     </div>
                 </article>
-                <article class="info3">
-                    <h1> Outside the Vehicle</h1>
+                <article class="info3 flip_slider">
+                    <h3> Outside the Vehicle</h3>
                     <div id="OutSlider">
                         <ul class="exterior">
                             <li class="list4">
                                 <div class="txt">
                                     <strong>세련미가 묻어나는 럭셔리 디자인</strong>
                                     <p>섬세한 라인과 디테일 요소들은 <br>S-Class Sedan의 매력을 두각시킵니다.</p>
-                                    <a href="">
-                                        <span>더 보기</span>
-                                    </a>
+                                    <a href="">더 보기</a>
                                 </div>
                             </li>
                             <li class="list5">
                                 <div class="txt">
                                     <strong>다이내믹함에 더해진 우아함</strong>
                                     <p>더욱 커진 테일 파이프 트림과 <br>고급스러움을 더 해주는 크리스탈-룩 <br>LED 리어 램프가 시선을 사로잡습니다.</p>
-                                    <a href="">
-                                        <span>더 보기</span>
-                                    </a>
+                                    <a href="">더 보기</a>
                                 </div>
                             </li>
                             <li class="list6">
                                 <div class="txt">
                                     <strong>고급스러운 라인으로 완성된 외관 디자인</strong>
                                     <p>고급스러운 돔 형태의 다이내믹한 루프라인은 <br>내부의 넓은 공간을 제공해주고, 당당한 <br>분위기의 외관을 표현하며, 스포티한 범퍼는 <br>아름다운 자태에 매력을 더하는 요소입니다.</p>
-                                    <a href="">
-                                        <span>더 보기</span>
-                                    </a>
+                                    <a href="">더 보기</a>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </article>
-                <article class="info4">
-                    <h1> Magic Body Control</h1>
+                <article class="info4 slider">
                     <div id="bodysideSlider">
                         <ul class="tech">
                             <li class="list7">
                                 <div class="txt">
+                                    <h3> Magic Body Control</h3>
                                     <strong>최고 수준의 승차감 선사</strong>
                                     <p>매직 바티 컨트롤(MAGIC BODY CONTROL)은 <br>카메라 영상과 주행 상태 정보를 기반으로 노면 <br>상태를 사전에 감지하고 이에 맞게 서스펜션을 <br>조정하는 기능입니다.</p>
-                                    <a href="">
-                                        <span>더 보기</span>
-                                    </a>
+                                    <a href="">더 보기</a>
                                 </div>
                             </li>
                             <li class="list8">
+                                <div class="txt">
+                                    <h3 class="tech2"> COMAND Online</h3>
+                                    <strong>최상의 컨트롤 센터</strong>
+                                    <p>운행에 필요한 모든 정보, 통신, <br>엔터테인먼트를 제공하는 기능입니다. <br>커맨드 온라인(COMAND Online)의 조작과 <br>디스플레이 시스템을 통해 내비게이션, 전화, <br>오디오, 비디오, 인터넷 등 모든 미디어를 <br>사용 및 조작할 수 있습니다.</p>
+                                    <a href="">더 보기</a>
+                                </div>
+                            </li>
+                            <li class="list9">
                                     <div class="txt">
-                                        <h1 class="tech2"> COMAND Online</h1>
-                                        <strong>최상의 컨트롤 센터</strong>
-                                        <p>운행에 필요한 모든 정보, 통신, <br>엔터테인먼트를 제공하는 기능입니다. <br>커맨드 온라인(COMAND Online)의 조작과 <br>디스플레이 시스템을 통해 내비게이션, 전화, <br>오디오, 비디오, 인터넷 등 모든 미디어를 <br>사용 및 조작할 수 있습니다.</p>
+                                        <h3> Multibeam LEDl</h3>
+                                        <strong>주행상황에 맞는 최적의 조명이 <br>비춰집니다.</strong>
+                                        <p>84개의 LED가 개별적으로 작동하며 <br>이를 제어하는 4개의 컨트롤 유닛이 <br>주행상황에 적절하게 빛을 조정합니다.</p>
                                         <a href="">더 보기</a>
                                     </div>
-                                </li>
-                                <li class="list9">
-                                        <div class="txt">
-                                            <h1> Multibeam LEDl</h1>
-                                            <strong>주행상황에 맞는 최적의 조명이 <br>비춰집니다.</strong>
-                                            <p>84개의 LED가 개별적으로 작동하며 <br>이를 제어하는 4개의 컨트롤 유닛이 <br>주행상황에 적절하게 빛을 조정합니다.</p>
-                                            <a href="">더 보기</a>
-                                        </div>
-                                </li>
+                            </li>
                         </ul>
                     </div>
                 </article>
@@ -273,38 +262,65 @@
                     <div id="colorGallery">
                         <h3>COLOR</h3>
                         <ul class="btn">
-                            <li>
-                                <button type="button" data-src="../assets/images/models/C1-1_Mag_B.jpg" data-alt="">
-                                    <img src="../assets/images/models/C1_Mag_B.jpg" alt="">
+                            <li class="first">
+                                <button type="button" data-src="../assets/images/models/C1-1_Mag_B.jpg" data-alt="마그네타이트 블랙">
+                                    <img src="../assets/images/models/C1_Mag_B.jpg" alt="마그네타이트 블랙">
                                     <span>Magnetite Black<br>(마그네타이트 블랙)</span>
                                 </button>
                             </li>
                             <li>
-                                <button type="button" data-src="../assets/images/models/C2-1_Obs_B.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C2_Obs_B.jpg" alt=""></button>
+                                <button type="button" data-src="../assets/images/models/C2-1_Obs_B.jpg" data-alt="옵시디안 블랙">
+                                    <img src="../assets/images/models/C2_Obs_B.jpg" alt="옵시디안 블랙">
+                                    <span>Obsidian Black<br>(옵시디안 블랙)</span>
+                                </button>
                             </li>
                             <li>
-                                <button type="button" data-src="../assets/images/models/C3-1_Ara_S.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C3_Ara_S.jpg" alt=""></button>
+                                <button type="button" data-src="../assets/images/models/C3-1_Ara_S.jpg" data-alt="">
+                                    <img src="../assets/images/models/C3_Ara_S.jpg" alt="">
+                                    <span>Aragonite Silver<br>(아라고나이트 실버)</span>
+                                </button>
                             </li>
                             <li>
-                                <button type="button" data-src="../assets/images/models/C4-1_Iri_S.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C4_Iri_S.jpg" alt=""></button>
+                                <button type="button" data-src="../assets/images/models/C4-1_Iri_S.jpg" data-alt="">
+                                    <img src="../assets/images/models/C4_Iri_S.jpg" alt="">
+                                    <span>Iridium Silver<br>(이리디움 실버)</span>
+                                </button>
                             </li>
                             <li>
-                                <button type="button" data-src="../assets/images/models/C5-1_Cav_Bl.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C5_Cav_Bl.jpg" alt=""></button>
+                                <button type="button" data-src="../assets/images/models/C5-1_Cav_Bl.jpg" data-alt="">
+                                    <img src="../assets/images/models/C5_Cav_Bl.jpg" alt="">
+                                    <span>Cavansite Blue<br>(카반사이트 블루)</span>
+                                </button>
+                            </li>
+                            <li class="first">
+                                <button type="button" data-src="../assets/images/models/C6-1_Ru_B.jpg" data-alt="">
+                                    <img src="../assets/images/models/C6_Ru_B.jpg" alt="">
+                                    <span>Ruby Black<br>(루비 블랙)</span>
+                                </button>
                             </li>
                             <li>
-                                <button type="button" data-src="../assets/images/models/C6-1_Ru_B.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C6_Ru_B.jpg" alt=""></button>
+                                <button type="button" data-src="../assets/images/models/C7-1_Dia_S.jpg" data-alt="">
+                                    <img src="../assets/images/models/C7_Dia_S.jpg" alt="">
+                                    <span>Diamond Silver<br>(다이아몬드 실버)</span>
+                                </button>
                             </li>
                             <li>
-                                <button type="button" data-src="../assets/images/models/C7-1_Dia_S.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C7_Dia_S.jpg" alt=""></button>
+                                <button type="button" data-src="../assets/images/models/C8-1_Eme_G.jpg" data-alt="">
+                                    <img src="../assets/images/models/C8_Eme_G.jpg" alt="">
+                                    <span>Emerald Green<br>(에메랄드 그린)</span>
+                                </button>
                             </li>
                             <li>
-                                <button type="button" data-src="../assets/images/models/C8-1_Eme_G.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C8_Eme_G.jpg" alt=""></button>
+                                <button type="button" data-src="../assets/images/models/C9-1_Sel_Gray.jpg" data-alt="">
+                                    <img src="../assets/images/models/C9_Sel_Gray.jpg" alt="">
+                                    <span>Selenite Grey<br>(세레나이트 그레이)</span>
+                                </button>
                             </li>
                             <li>
-                                <button type="button" data-src="../assets/images/models/C9-1_Sel_Gray.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C9_Sel_Gray.jpg" alt=""></button>
-                            </li>
-                            <li>
-                                <button type="button" data-src="../assets/images/models/C10-1_Ant_Bl.jpgC1-1_Mag_B.jpg" data-alt=""><img src="../assets/images/models/C10_Ant_Bl.jpg" alt=""></button>
+                                <button type="button" data-src="../assets/images/models/C10-1_Ant_Bl.jpg" data-alt="">
+                                    <img src="../assets/images/models/C10_Ant_Bl.jpg" alt="">
+                                    <span>Antrahsite Blue<br>(안트라사이트 블루)</span>
+                                </button>
                             </li>
                         </ul>
                         <div class="big">

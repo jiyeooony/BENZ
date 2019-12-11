@@ -8,33 +8,36 @@
     <link rel="icon" href="../assets/images/favicon.ico">
 
     <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/future.js"></script>
     <script src="../assets/js/anim.js"></script>
-    <script src="../assets/js/fullpage.min.js"></script>
 
 
-    <script>
-            $(document).ready(function() {
-                $('#fullpage').fullpage({
-                    navigation: true,   //인디케이터를 보여지게 
-                    navigationPosition: 'right',    //인디케이터의 위치
-                    navigationTooltips: ['한화라이프 리즈', '어바웃 리즈', '푸터'], //인디케이터에 오버한 경우 보여질 텍스트, 접근성 향상
-                    scrollBar: true //스크롤바 생성하기(top 버튼이 필요하면 추가)
-                });
-            });
-    </script>
     <!--[if lt IE 9]>
         <script type="text/javascript" src="js/html5shiv.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
     <div id="wrap">
         <!-- TOP -->
-        <header id="header">  
-                <div class="eq_headline"> <!-- 로고박스 부분 -->
-                    <h1>
-                        <a class="benz_logo" href="../index.html"><img src="../assets/images/common/logo_for_amg_eq.png" alt="벤츠"></a>
-                    </h1>
+        <header id="intro">
+            <div class="amg_headline">
+                <h1>
+                    <a class="benz_logo" href="../index.html"><img src="../assets/images/common/logo_for_amg_eq.png" alt="벤츠"></a>
+                </h1>
+                <div>
+                    <ul class="amg_skiplist f_r">
+                        <li><a class="amg_logo" href="#eq_article1"><img src="../assets/images/amg/amg_logo.png" alt="AMG"></a></li>
+                        <li><a href="#eq_article1">TOP</a></li>
+                        <li><a href="#eq_article2">OVERVIEW</a></li>
+                        <li><a href="#eq_article3">EQC</a></li>
+                        <li><a href="#eq_article4">VOLOCOPTER</a></li>
+                        <li><a href="#eq_article5">FORMULAR E</a></li>
+                        <li><a href="#eq_article6">INTERACTIVE SPACE &amp; PARTNER SPACE</a></li>
+                    </ul>
                 </div>
+            </div>
             <video class="video" width="1920" height="1080" controls autoplay muted>
                 <source src="../assets/images/amg/AMG_MAIN.mp4" type="video/mp4">
             </video>
@@ -57,41 +60,121 @@
                 </div>
     
             </strong>
-        <header>
+        </header>
 
-        <!-- content -->
-        <div>
-            <img class="amgName" src="../assets/images/amg/AMG_NAME.png">
-        </div>
-        <!-- content - the future -->
-        <div class="slide">
-            <img class="amgPic1" src="../assets/images/amg/amg_1.png" alt="벤츠의 과거 AMG의 빨간색 스포츠카">
-            <img class="amgPic1_2" src="../assets/images/amg/amg_1_bt.png" alt="검정색바탕색">
-        </div>
-        
-        <div class="Title_P">
-            <label for="">T</label>
-            <label for="">H</label>
-            <label for="">E</label>
-            <label for="">&nbsp;</label>
-            <label for="">P</label>
-            <label for="">A</label>
-            <label for="">S</label>
-            <label for="">T</label>
-        </div>
-        <p class="P_c">1967년 이후 가장 강력한 도전자는 바로 우리 자신입니다.</p>
+        <section id="content">
+            <div class="bg_box p_r"><img class="amg_bglogo p_a" src="../assets/images/amg/AMG_NAME.png" alt="amg Future"></div>
+            <article id="amg_article2" class="amg_article p_r">
+                <div class="amg_pic1"></div>
+                <div class="amg_pic_bg_odd"></div>
+                <div class="Title_P fade">
+                    <span>T</span>
+                    <span>H</span>
+                    <span>E</span>
+                    <span>&nbsp;</span>
+                    <span>P</span>
+                    <span>A</span>
+                    <span>S</span>
+                    <span>T</span>
+                </div>
+              
+      
+                <div class="amg_txt_odd_wrap fade p_a">
+                    <p>1967년 이후 가장 강력한 도전자는 바로 우리 자신입니다. <br></p>
+                    <p>AMG 300 E 5.6은 303 km/h 이상으로 미국에서 커다란 주목을 받았습니다.<br>미국의 언론들은 이 자동차에 "The Hammer"라는 별칭을 붙였으며 </p>
+                    <p>오늘날까지 그 명성은 계속되고 있습니다. <br>50년 뒤 우리에게 다시 한번 물어봐 주십시오.</p>
+         
+                </div>
+            </article>
+            <article id="amg_article3" class="amg_article p_r">
+                <div class="amg_pic2"></div>
+                <div class="amg_pic_bg_even"></div>
+                <div class="Title_P fade">
+                        <span>T</span>
+                        <span>H</span>
+                        <span>E</span>
+                        <span>&nbsp;</span>
+                        <span>F</span>
+                        <span>U</span>
+                        <span>T</span>
+                        <span>U</span>
+                        <span>R</span>
+                        <span>E</span>
+                    </div>
+                <div class="amg_txt_even_wrap p_a">
+                        <p>지난 반세기 동안 최상의 스포츠카 및 퍼포먼스 브랜드로써 그 품질을 지속적으로 <br></p>
+                        <p>증명해왔으며 현재에도 퍼포먼스 향상을 위해 더욱 노력하고 있습니다.</p> 
+                </div>
+            </article>
 
-        <div>
-            <img class="amgPic2" src="../assets/images/amg/amg_2.png" alt="벤츠의 미래 AMG의 기술을 바라보는 풍경">
-            <img class="amgPic2_2" src="../assets/images/amg/amg_2_bt.png" alt="검정색바탕색">
-            <!-- <h2></h2> -->
-        </div>
+            <!-- partial:index.partial.html -->
+            <div>
+                <img src="../assets/images/amg/welcome_to.png" alt="" class="welcome fade">
+                <div class="text-container">
+                    <span class="reg-text fade"><img src="../assets/images/amg/Mercedes.png" alt="Mercedes"></span>
+                    <span class="letter fade"><img src="../assets/images/amg/A.png" alt="A"></span>
+                    <span class="letter fade"><img src="../assets/images/amg/M.png" alt="M"></span>
+                    <span class="letter fade"><img src="../assets/images/amg/G.png" alt="G"></span>
+     
+                    <div class="redUnderline2">
+                        <p class="left"></p>
+                        <p class="right"></p>
+                    </div>
+                    <div class="vehicles fade">
+                        <img src="../assets/images/amg/performance_vehicles.png" alt="">
+                        <img src="../assets/images/amg/assertive_style.png" alt="">
+                    </div>
+                
+                </div>
+            </div>
 
+            <!-- one-man/one-engin -->
+            <div>
+                <span><img src="../assets/images/amg/one_man.png" alt="엔진사진" class="engin"></span>
+                    <div class="enginSub">
+                        <span><p>One-Man One-Engin</p></span>
+                        <span><p>대량 생산과 달리 Mercedes-AMG에서는 전통적으로 엔진을 <br>
+                        "One Man – One Enagine"의 철학에 따라 손으로 제작합니다. <br>
+                        한 명의 엔지니어가 각각 한 개의 크랭크 어셈블리 조립을 거쳐 배선 및 엔진 오일<br> 
+                        주입에 이르기까지 전 과정을 책임집니다.<br> 
+                        그리고 이것은 AMG 엔진 엠블렘의 엔지니어 서명으로 뚜렷한 흔적을 남깁니다.</p></span>
+                    </div>
+            </div>
+
+            <div>
+                <p>PERFORMANCE with AMG</p>
+                <p>다양한 Mercedes-AMG 자동차에 대해 알아보고, 강력한 드라이빙 퍼포먼스를 체험해 보십시오.</p>
+            </div>
+            <div class="redUnderline3">
+                    <p class="left"></p>
+                    <p class="right"></p>
+            </div>
+
+        </section>
+
+        <footer id="footer" class="p_r">
+            <h1 class="logo p_a">
+                <img src="../assets/images/common/benz_type.png" alt="벤츠">
+            </h1>
+            <div class="leftFooter p_r">
+                <ul class="p_a">
+                    <li>ⓒ2019 메르세데스-벤츠 코리아(주)</li>
+                    <li>메르세데스-벤츠 파이낸셜 서비스 코리아 (주)</li>
+                    <li>다임러 트럭 코리아(주)</li>
+                    <li>메르세데스-벤츠 모빌리티 코리아(주)</li>
+                </ul>
+                <address class="p_a">서울특별시 중구 한강대로 416 서울스퀘어 8, 9 10 층</address>
+            </div>
+            <div class="rightFooter p_r">
+                <ul class="p_a">
+                    <li>고객센터</li>
+                    <li>대표전화 080-001-1886</li>
+                    <li>팩스 0504-841-6217</li>
+                    <li>24시간 안내</li>
+                </ul>
+            </div>
+        </footer>
     </div>
-
-    
-
-
-
 </body>
+
 </html>

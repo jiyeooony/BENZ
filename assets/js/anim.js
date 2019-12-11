@@ -43,6 +43,18 @@ $(document).ready(function() {
         console.log(current);
       }, 5000);
 });
+$(document).ready(function() {
+    var current = 0;   //시작되는 이미지의 번호
+    var maxNum = 8;
+
+    var timer = setInterval(function () {
+        $('.welcome').eq(current).animate({opacity: 1});
+        current++;    //1, 2,3,4......8
+
+        if (current == maxNum) clearInterval(timer);
+        console.log(current);
+      }, 3000);
+});
 
 // var node = document.querySelector('.Title_P');
 // var text = new T(node);
@@ -65,23 +77,89 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-	var inputs = $(".Title_P").find($("label") );
+	var inputs = $(".Title_P").find($("span") );
 	
 	for(var i =0 ; i< inputs.length; i ++)
 	{ 
 	     var index = i +1;
 		 var time = ((inputs.length)-i ) * 100;
-		$(".Title_P label:nth-child("+index+")").css( "-animation", "anim 3s "+time+"ms " );
+		$(".Title_P span:nth-child("+index+")").css( "-animation", "anim 3s "+time+"ms " );
 	}
 })
 
-var $win = $(window);
-var $slide = $("#wrap .slide");
-var liSize = parseInt($slide.children().css("width"));
-/* 스크롤에 따라 애니메이션 효과 */
-$win.on("scroll", function(){
-    var scrollT = $wind.scrollTop();
-    var topPos = $slide.offset().top;
 
-    if (scrollT > topPos -500) $slide.addClass("on");
-})
+// $(document).ready(function(){
+// 	var $win = $(window);
+// 	var winHei=$win.height();	// window height
+
+// 	// window resize
+// 	$win.resize(function(){
+// 		winHei=$win.height();
+// 		$win.trigger("scroll");
+// 	});
+	
+// 	//스크롤에 fadeIn 동작하는 컨텐츠
+// 	var tgHei;		//outerHeight
+// 	var tgTop;	    //offset().top
+// 	var start;
+// 	var end;
+
+// 	$win.on("scroll",function(){
+// 		var $fade=$(".fade");
+// 		var scrollT=$(this).scrollTop();
+
+// 		$fade.each(function  () {
+// 			tgHei=$(this).outerHeight();
+// 			tgTop=$(this).offset().top;
+
+// 			start = tgTop+tgHei*0.5-winHei;
+// 			end = tgTop+tgHei*0.6;
+
+// 			if (start < scrollT && end > scrollT) $(this).addClass("on");
+// 			else $(this).removeClass("on");
+// 		});
+// 	});
+
+
+$(document).ready(function () {
+    //fadeInUp 효과
+    var scrollY = 0; //윈도우 상단좌표값
+    //var timer = 0; //한번만 실행시키기 위한 변수
+
+    $(window).on("scroll", function () {
+        //clearTimeout(timer);
+
+        //timer = setTimeout(function () {
+            scrollY = $(this).scrollTop();
+            console.log(scrollY);
+
+            $(".fade").each(function () {
+                if (scrollY > $(this).offset().top - 600) $(this).addClass('on');
+                else $(this).removeClass('on');
+            });
+        //}, 100);
+    });
+});
+
+	//header 바로가기 메뉴
+	$("#intro .amg_headline .amg_skiplist li a").on("click", function () {
+		var $list = $("#intro .amg_headline .amg_skiplist");
+		var idx = $(this).parent().index();
+
+		$(this).closest(".amg_skiplist").toggleClass("active");
+
+		if ($list.hasClass("active")) $list.stop().animate({height:360}, "fast").css({background: 'rgba(0,0,0,0.9)'});
+		else $list.stop().animate({height:45}, "fast").css({color: '#fff', background: 'none'});
+
+		if (idx) location.href = '#amg_article' + idx;
+
+		return false;
+	});
+
+
+$(document).on('ready', function () {
+    setTimeout(function () {
+        $('.letter').addClass('loaded');
+        $('.reg-text').addClass('loaded');
+    }, 1000);
+});

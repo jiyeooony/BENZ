@@ -17,23 +17,20 @@ $(document).ready(function(){
 	$win.on("scroll",function(){
 		var $fade=$(".fade");
 		var scrollT=$(this).scrollTop();
-		var headHei=100;
-		//console.log(scrollT);
 
 		$fade.each(function  () {
 			tgHei=$(this).outerHeight();
 			tgTop=$(this).offset().top;
 
 			start = tgTop+tgHei*0.5-winHei;
-			end = tgTop+tgHei*0.5-headHei;
-			//console.log(start, end);
+			end = tgTop+tgHei*0.6;
 
 			if (start < scrollT && end > scrollT) $(this).addClass("on");
 			else $(this).removeClass("on");
 		});
 	});
 
-	//header 언어선택
+	//header 바로가기 메뉴
 	$("#intro .eq_headline .eq_skiplist li a").on("click", function () {
 		var $list = $("#intro .eq_headline .eq_skiplist");
 		var idx = $(this).parent().index();
