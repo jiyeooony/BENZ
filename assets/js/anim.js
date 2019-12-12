@@ -48,7 +48,7 @@ $(document).ready(function() {
     var maxNum = 8;
 
     var timer = setInterval(function () {
-        $('.welcome').eq(current).animate({opacity: 1});
+        $('.container').eq(current).animate({opacity: 1});
         current++;    //1, 2,3,4......8
 
         if (current == maxNum) clearInterval(timer);
@@ -56,91 +56,50 @@ $(document).ready(function() {
       }, 3000);
 });
 
-// var node = document.querySelector('.Title_P');
-// var text = new T(node);
-
-// function random(min, max) {
-//     return (Math.random() * (max - min)) + min;
-// }
-
-// text.chars.map(function(v, i){
-//     TweenMax.from(v, 2.5, {
-//         opacity: 0,
-//         x: random(-500, 500),
-//         y: random(-500, 500),
-//         z: random(-500, 500),
-//         scale: .1,
-//         delay: i * .02,
-//         yoyo: true
-//     });
-// });
-
-
-$(document).ready(function() {
-	var inputs = $(".Title_P").find($("span") );
-	
-	for(var i =0 ; i< inputs.length; i ++)
-	{ 
-	     var index = i +1;
-		 var time = ((inputs.length)-i ) * 100;
-		$(".Title_P span:nth-child("+index+")").css( "-animation", "anim 3s "+time+"ms " );
-	}
-})
-
-
-// $(document).ready(function(){
-// 	var $win = $(window);
-// 	var winHei=$win.height();	// window height
-
-// 	// window resize
-// 	$win.resize(function(){
-// 		winHei=$win.height();
-// 		$win.trigger("scroll");
-// 	});
-	
-// 	//스크롤에 fadeIn 동작하는 컨텐츠
-// 	var tgHei;		//outerHeight
-// 	var tgTop;	    //offset().top
-// 	var start;
-// 	var end;
-
-// 	$win.on("scroll",function(){
-// 		var $fade=$(".fade");
-// 		var scrollT=$(this).scrollTop();
-
-// 		$fade.each(function  () {
-// 			tgHei=$(this).outerHeight();
-// 			tgTop=$(this).offset().top;
-
-// 			start = tgTop+tgHei*0.5-winHei;
-// 			end = tgTop+tgHei*0.6;
-
-// 			if (start < scrollT && end > scrollT) $(this).addClass("on");
-// 			else $(this).removeClass("on");
-// 		});
-// 	});
-
 
 $(document).ready(function () {
+    var $win = $(window);
+	var winHei=$win.height();	// window height
+
+	// window resize
+	$win.resize(function(){
+		winHei=$win.height();
+		$win.trigger("scroll");
+    });
+    
+    var tgHei;		//outerHeight
+	var tgTop;	//offset().top
+	var start;
+    var end;
+    
     //fadeInUp 효과
-    var scrollY = 0; //윈도우 상단좌표값
+    //var scrollY = 0; //윈도우 상단좌표값
     //var timer = 0; //한번만 실행시키기 위한 변수
 
     $(window).on("scroll", function () {
         //clearTimeout(timer);
 
         //timer = setTimeout(function () {
-            scrollY = $(this).scrollTop();
+            var scrollY=$(this).scrollTop();
             console.log(scrollY);
 
             $(".fade").each(function () {
-                if (scrollY > $(this).offset().top - 600) $(this).addClass('on');
-                else $(this).removeClass('on');
+                tgHei=$(this).outerHeight();
+                tgTop=$(this).offset().top;
+    
+                start = tgTop+tgHei*0.5-winHei;
+                end = tgTop+tgHei*0.6;
+    
+                if (start < scrollY && end > scrollY) 
+                    $(this).addClass('on');
+
+                else
+                    $(this).removeClass('on');
             });
         //}, 100);
     });
 });
-
+$(document).ready(function(){
 	//header 바로가기 메뉴
 	$("#intro .amg_headline .amg_skiplist li a").on("click", function () {
 		var $list = $("#intro .amg_headline .amg_skiplist");
@@ -156,10 +115,11 @@ $(document).ready(function () {
 		return false;
 	});
 
-
+});
 $(document).on('ready', function () {
     setTimeout(function () {
         $('.letter').addClass('loaded');
         $('.reg-text').addClass('loaded');
     }, 1000);
 });
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8">
     <title> AMG : 메르세데스-벤츠 </title>
@@ -9,10 +10,20 @@
 
     <script src="../assets/js/jquery-1.12.4.min.js"></script>
     <script src="../assets/js/common.js"></script>
-    <script src="../assets/js/future.js"></script>
     <script src="../assets/js/anim.js"></script>
+    <script src="../assets/js/jquery.bxslider.min.js"></script>
 
-
+    <script>
+            $(document).ready(function () {
+                $('#mainSlider .visual').bxSlider({
+                    mode: 'fade',    //'horizontal'(기본값), 'vertical', 'fade'
+                    ariaLive: true, //스크린리더 사용자에게 변경된 정보를 알릴지 여부
+                    ariaHidden: true, //보여지는 슬라이더 내요인지 여부
+                    prevText: '이전 슬라이더 보기',
+                    nextText: '다음 슬라이더 보기',
+                });
+            });
+        </script>
     <!--[if lt IE 9]>
         <script type="text/javascript" src="js/html5shiv.min.js"></script>
     <![endif]-->
@@ -24,132 +35,185 @@
         <header id="intro">
             <div class="amg_headline">
                 <h1>
-                    <a class="benz_logo" href="../index.html"><img src="../assets/images/common/logo_for_amg_eq.png" alt="벤츠"></a>
+                    <a class="benz_logo" href="../index_non_vid.html"><img
+                            src="../assets/images/common/logo_for_amg_eq.png" alt="벤츠"></a>
                 </h1>
                 <div>
                     <ul class="amg_skiplist f_r">
-                        <li><a class="amg_logo" href="#eq_article1"><img src="../assets/images/amg/amg_logo.png" alt="AMG"></a></li>
-                        <li><a href="#eq_article1">TOP</a></li>
-                        <li><a href="#eq_article2">OVERVIEW</a></li>
-                        <li><a href="#eq_article3">EQC</a></li>
-                        <li><a href="#eq_article4">VOLOCOPTER</a></li>
-                        <li><a href="#eq_article5">FORMULAR E</a></li>
-                        <li><a href="#eq_article6">INTERACTIVE SPACE &amp; PARTNER SPACE</a></li>
+                        <li><a class="amg_logo" href="#amg_article1"><img src="../assets/images/amg/amg_logo.png"
+                                    alt="AMG"></a></li>
+                        <li><a href="#amg_article1">TOP</a></li>
+                        <li><a href="#amg_article2">THE PAST</a></li>
+                        <li><a href="#amg_article3">THE FUTURE</a></li>
+                        <li><a href="#amg_article4">WELCOME TO AMG</a></li>
+                        <li><a href="#amg_article5">ONE-MAN ONE-ENGIN</a></li>
+                        <li><a href="#amg_article6">PERFORMANCE with AMG</a></li>
                     </ul>
                 </div>
             </div>
-            <video class="video" width="1920" height="1080" controls autoplay muted>
+            <video id="amg_article1" class="video" width="1920" height="1080" autoplay muted>
                 <source src="../assets/images/amg/AMG_MAIN.mp4" type="video/mp4">
             </video>
-            
+
             <strong class="maintxt">
                 <img class="T" src="../assets/images/amg/T_first.png" alt="">
                 <img class="H" src="../assets/images/amg/H_Second.png" alt="">
                 <img class="P" src="../assets/images/amg/P_first.png" alt="">
-                <img class="E" src="../assets/images/amg/E_Second.png" alt="" >
+                <img class="E" src="../assets/images/amg/E_Second.png" alt="">
                 <span class="blind">The world of driving performance</span>
 
                 <img class="OA" src="../assets/images/amg/One_attitud.png" alt="One_attitud">
                 <img class="YC" src="../assets/images/amg/Your_Choice.png" alt="Your_Choice">
 
                 <img class="benzName" src="../assets/images/amg/benz_name.png" alt="mercedesbenz">
-                <div class="redUnderline">
-                    <p class="left"></p>
-                    <p class="right"></p>
-
-                </div>
-    
+                
             </strong>
+            <div class="redUnderline">
+                <p class="left"></p>
+                <p class="right"></p>
+            </div>
+            <div class="container">
+                <a href="https://youtu.be/nM1v4Neq8Vg" class="button">VIEW VIDEO</a>
+            </div>
         </header>
 
         <section id="content">
-            <div class="bg_box p_r"><img class="amg_bglogo p_a" src="../assets/images/amg/AMG_NAME.png" alt="amg Future"></div>
+            <div class="bg_box p_r"><img class="amg_bglogo p_a" src="../assets/images/amg/AMG_NAME.png"
+                    alt="amg Future"></div>
             <article id="amg_article2" class="amg_article p_r">
                 <div class="amg_pic1"></div>
                 <div class="amg_pic_bg_odd"></div>
-                <div class="Title_P fade">
-                    <span>T</span>
-                    <span>H</span>
-                    <span>E</span>
-                    <span>&nbsp;</span>
-                    <span>P</span>
-                    <span>A</span>
-                    <span>S</span>
-                    <span>T</span>
+                <div class="Title_P fadeInRight fade">
+                    <p>THE PAST</p>
                 </div>
-              
-      
+
+
                 <div class="amg_txt_odd_wrap fade p_a">
                     <p>1967년 이후 가장 강력한 도전자는 바로 우리 자신입니다. <br></p>
                     <p>AMG 300 E 5.6은 303 km/h 이상으로 미국에서 커다란 주목을 받았습니다.<br>미국의 언론들은 이 자동차에 "The Hammer"라는 별칭을 붙였으며 </p>
                     <p>오늘날까지 그 명성은 계속되고 있습니다. <br>50년 뒤 우리에게 다시 한번 물어봐 주십시오.</p>
-         
+
                 </div>
             </article>
             <article id="amg_article3" class="amg_article p_r">
                 <div class="amg_pic2"></div>
                 <div class="amg_pic_bg_even"></div>
-                <div class="Title_P fade">
-                        <span>T</span>
-                        <span>H</span>
-                        <span>E</span>
-                        <span>&nbsp;</span>
-                        <span>F</span>
-                        <span>U</span>
-                        <span>T</span>
-                        <span>U</span>
-                        <span>R</span>
-                        <span>E</span>
-                    </div>
-                <div class="amg_txt_even_wrap p_a">
-                        <p>지난 반세기 동안 최상의 스포츠카 및 퍼포먼스 브랜드로써 그 품질을 지속적으로 <br></p>
-                        <p>증명해왔으며 현재에도 퍼포먼스 향상을 위해 더욱 노력하고 있습니다.</p> 
+                <div class="Title_P fadeInRight fade">
+                    <p>THE FUTURE</p>
+                </div>
+                <div class="amg_txt_even_wrap fade p_a">
+                    <p>지난 반세기 동안 최상의 스포츠카 및 퍼포먼스 브랜드로써 그 품질을 지속적으로 <br></p>
+                    <p>증명해왔으며 현재에도 퍼포먼스 향상을 위해 더욱 노력하고 있습니다.</p>
                 </div>
             </article>
 
             <!-- partial:index.partial.html -->
             <div>
-                <img src="../assets/images/amg/welcome_to.png" alt="" class="welcome fade">
-                <div class="text-container">
-                    <span class="reg-text fade"><img src="../assets/images/amg/Mercedes.png" alt="Mercedes"></span>
-                    <span class="letter fade"><img src="../assets/images/amg/A.png" alt="A"></span>
-                    <span class="letter fade"><img src="../assets/images/amg/M.png" alt="M"></span>
-                    <span class="letter fade"><img src="../assets/images/amg/G.png" alt="G"></span>
-     
-                    <div class="redUnderline2">
-                        <p class="left"></p>
-                        <p class="right"></p>
+                <article id="amg_article4">
+                    <div class="welcome fadeIn fade">
+                        <img src="../assets/images/amg/welcome_to.png" alt="">
                     </div>
-                    <div class="vehicles fade">
-                        <img src="../assets/images/amg/performance_vehicles.png" alt="">
-                        <img src="../assets/images/amg/assertive_style.png" alt="">
+                    <div class="text-container">
+                        <span class="reg-text fade"><img src="../assets/images/amg/Mercedes.png" alt="Mercedes"></span>
+                        <img src="../assets/images/amg/A.png" alt="A" class="letter fade">
+                        <img src="../assets/images/amg/M.png" alt="M" class="letter fade">
+                        <img src="../assets/images/amg/G.png" alt="G" class="letter fade">
+
+                        <div class="redUnderline2 fade">
+                            <p class="left"></p>
+                            <p class="right"></p>
+                        </div>
+                        <div class="vehicles fade">
+                            <img src="../assets/images/amg/performance_vehicles.png" alt="">
+                            <img src="../assets/images/amg/assertive_style.png" alt="">
+                        </div>
                     </div>
-                
-                </div>
+                </article>
             </div>
 
             <!-- one-man/one-engin -->
             <div>
-                <span><img src="../assets/images/amg/one_man.png" alt="엔진사진" class="engin"></span>
+                <article id="amg_article5">
+                    <span><img src="../assets/images/amg/one_man.png" alt="엔진사진" class="engin fadeInRight fade"></span>
                     <div class="enginSub">
-                        <span><p>One-Man One-Engin</p></span>
-                        <span><p>대량 생산과 달리 Mercedes-AMG에서는 전통적으로 엔진을 <br>
-                        "One Man – One Enagine"의 철학에 따라 손으로 제작합니다. <br>
-                        한 명의 엔지니어가 각각 한 개의 크랭크 어셈블리 조립을 거쳐 배선 및 엔진 오일<br> 
-                        주입에 이르기까지 전 과정을 책임집니다.<br> 
-                        그리고 이것은 AMG 엔진 엠블렘의 엔지니어 서명으로 뚜렷한 흔적을 남깁니다.</p></span>
+                        <div class="enginSub_Text fadeIn fade">
+                            <p>ONE - MAN, ONE - ENGIN</p>
+                            <div class="sub_enginSub_Text">
+                                <p>대량 생산과 달리 Mercedes-AMG에서는 전통적으로 엔진을 <br>
+                                "One Man – One Enagine"의 철학에 따라 손으로 제작합니다. <br>
+                                    한 명의 엔지니어가 각각 한 개의 크랭크 어셈블리 조립을 거쳐 배선 및 엔진 오일<br>
+                                    주입에 이르기까지 전 과정을 책임집니다.<br>
+                                    그리고 이것은 AMG 엔진 엠블렘의 엔지니어 서명으로 뚜렷한 흔적을 남깁니다.</p>
+                            </div>
+                        </div>
                     </div>
+                </article>
             </div>
-
-            <div>
-                <p>PERFORMANCE with AMG</p>
-                <p>다양한 Mercedes-AMG 자동차에 대해 알아보고, 강력한 드라이빙 퍼포먼스를 체험해 보십시오.</p>
-            </div>
-            <div class="redUnderline3">
+            <article id="amg_article6">
+                <div class="Title_AMG">
+                    <p>PERFORMANCE with AMG</p>
+                </div>
+                <div class="Sub_AMG">
+                    <p>다양한 Mercedes-AMG 자동차에 대해 알아보고, 강력한 드라이빙 퍼포먼스를 체험해 보십시오.</p>
+                </div>
+                <div class="redUnderline3 fade">
                     <p class="left"></p>
                     <p class="right"></p>
-            </div>
+                </div>
+            </article>
 
+            <article id="amg_article7">
+                    <div id="mainSlider">
+                        <ul class="visual">
+                            <li>
+                                <div>
+                                    <a href="../model/class.html"><img src="../assets/images/amg/CLA.jpeg" alt="CLA"></a>                             <p>CLA</p>
+                                </div>
+                                <div>
+                                    <a href="../model/class.html"><img src="../assets/images/amg/C-Class.jpeg" alt="C-Class"></a>
+                                    <p>C-Class</p>
+                                </div>
+                                <div>
+                                    <a href="../model/class.html"><img src="../assets/images/amg/CLS.jpeg" alt="CLS"></a>    <p>CLS</p>
+                                </div>
+                                </li>
+                                
+                            <li>
+                                <div>
+                                    <a href="../model/class.html"><img src="../assets/images/amg/E-Class.jpeg" alt="E-Class"></a>
+                                    <p>E-Class</p>
+                                </div>
+                                <div>
+                                    <a href="../model/class.html"><img src="../assets/images/amg/G-Class.jpeg" alt="G-Class"></a>
+                                    <p>G-Class</p>
+                                </div>
+                                <div>
+                                    <a href="../model/class.html"><img src="../assets/images/amg/GLA.jpeg" alt="GLA"></a>    <p>GLA</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="../model/class.html"><img src="../assets/images/amg/GLC.jpeg" alt="GLC"></a>    <p>GLC</p>
+                                </div>
+                                <div>
+                                    <a href="../model/class.html"><img src="../assets/images/amg/GLE.jpeg" alt="GLE"></a>    <p>GLE</p>
+                                </div>
+                                <div>
+                                    <a href="../model/class.html"><img src="../assets/images/amg/GT.jpeg" alt="GT"></a>      <p>GT</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="../model/class.html"><img src="../assets/images/amg/S-Class.jpeg" alt="S-Class"></a>
+                                    <p>S-Class</p>
+                                </div>
+                                <div>
+                                    <a href="../model/class.html"><img src="../assets/images/amg/4-Door-Coupe.jpeg" alt=""></a>                         <p>GT-4-Door Coupe</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+            </article>
         </section>
 
         <footer id="footer" class="p_r">

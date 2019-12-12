@@ -7,7 +7,7 @@ $(document).ready(function () {
 	var nextNum1; //클릭한 .mapBtn2 > li의 인덱스 번호
 
 	$addListLi.eq(0).addClass("on");
-	$mapBtn1Li.eq(0).addClass("on");
+	$mapBtn1Li.eq(1).addClass("on");
 
 	//1).mapBtn2 li 를 클릭하는 경우
 	$mapBtn1Li.children().on("click", function () {
