@@ -10,10 +10,29 @@
 
     <script src="../assets/js/jquery-1.12.4.min.js"></script>
     <script src="../assets/js/common.js"></script>
-    <script src="../assets/js/future.js"></script>
     <!--[if lt IE 9]>
         <script type="text/javascript" src="js/html5shiv.min.js"></script>
     <![endif]-->
+    <script>
+        $(document).ready(function(){
+            var $win = $(window);
+            var winHei=$win.height();	// window height
+
+            $("#intro .eq_headline .eq_skiplist li a").on("click", function () {
+                var $list = $("#intro .eq_headline .eq_skiplist");
+                var idx = $(this).parent().index();
+
+                $(this).closest(".eq_skiplist").toggleClass("active");
+
+                if ($list.hasClass("active")) $list.stop().animate({height:360}, "fast").css({background: 'rgba(0,0,0,0.9)'});
+                else $list.stop().animate({height:45}, "fast").css({color: '#fff', background: 'none'});
+
+                if (idx) location.href = '#eq_article' + idx;
+
+                return false;
+            });
+         });
+    </script>
 </head>
 
 <body>
@@ -66,7 +85,7 @@
                 <div class="eq_pic2"></div>
                 <div class="eq_pic_bg_even"></div>
                 <h2 class="eq_tit_even p_a">EQC</h2>
-                <a class="eq_link_even p_a" href="">EQC 제품 카달로그 및 기술사양
+                <a class="eq_link_even p_a" href="../assets/download/EQC_Catalogue_20191016.pdf" target="_blank" download>EQC 제품 카달로그 및 기술사양
                     <span class="p_r"></span>
                 </a>
                 <div class="eq_txt_even_wrap p_a">

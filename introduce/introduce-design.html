@@ -14,7 +14,27 @@
     <![endif]-->
     <script src="../assets/js/jquery-1.12.4.min.js"></script>
     <script src="../assets/js/common.js"></script>
-    <script src="../assets/js/future.js"></script>
+    <script>
+    $(document).ready(function(){
+        //fadeInUp 효과
+        var scrollY = 0; //윈도우 상단좌표값
+        var timer = 0; //한번만 실행시키기 위한 변수
+
+        $(window).on("scroll", function () {
+            clearTimeout(timer);
+
+            timer = setTimeout(function () {
+                scrollY = $(this).scrollTop();
+                console.log(scrollY);
+
+                $(".fade2").each(function () {
+                    if (scrollY > $(this).offset().top - 700) $(this).stop().addClass('on');
+                    else $(this).removeClass('on');
+                });
+            }, 100);
+        });
+    });
+    </script>
 </head>
 
 <body>
@@ -112,9 +132,9 @@
                     <li class="on"><a href="introduce-design.html">디자인</a></li>
                 </ul>
                 <div class="center cnt design">
-                    <div class="clearfix design1 fade">
+                    <div class="clearfix design1 fade2">
                         <h3 class="sub_tit">Mercedes-AMG GT 컨셉트 디자인</h3>
-                        <img src="../assets/images/introduce/design_img1.jpg" alt="">
+                        <img src="../assets/images/introduce/design_img1-1.jpg" alt="">
                         <h4 class="highlight"><span class="line_bg">스포츠카 브랜드인 AMG Future Performance가 하이브리드 쇼 카를 소개합니다.</span></h4>
                         <h5>강인하면서도 균형잡힌 외관</h5>
                         <p class="txt">익스테리어 디자인은 매우 강인한 균형감, 높은 볼륨감과 감각적이면서도 절제하는 모습의 평면 디자인으로 구성됩니다.<br>
@@ -126,7 +146,7 @@
                         
                     </div>
 
-                    <div class="clearfix design2 fade">
+                    <div class="clearfix design2 fade2">
                         <div class="f_l txt_right">
                             <h4 class="highlight"><span class="line_bg left_bg">Mirror Cam</span></h4>
                             <p>사이드 미러의 기능을 테스트카에서는 공기역학적으로<br>
@@ -140,7 +160,7 @@
                         <img class="f_r" src="../assets/images/introduce/design_img2.jpg" alt="">
                     </div>
 
-                    <div class="clearfix design3 fade">
+                    <div class="clearfix design3 fade2">
                         <div class="f_r">
                             <h4 class="highlight"><span class="line_bg">"Nano active fibre technology"</span></h4>
                             <p>"nano active fibre technology"를 통해 Mercedes-AMG는 미래를 선도할<br>
@@ -155,7 +175,7 @@
                         <img class="f_l" src="../assets/images/introduce/design_img3.jpg" alt="">
                     </div>
 
-                    <div class="clearfix design4 fade">
+                    <div class="clearfix design4 fade2">
                         <div class="f_l">
                             <img  src="../assets/images/introduce/design_img4.jpg" alt="">
                             <img  src="../assets/images/introduce/design_img5.jpg" alt="">

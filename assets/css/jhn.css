@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /* EQ Future */
-#wrap{overflow: hidden;}
 .eq_headline{position: fixed; top: 0; left: 0; width: 100%; height: 80px; background: rgba(0,0,0,.8); z-index: 500;}
 .eq_headline .benz_logo{float: left; margin-top: 17.5px; margin-left: 160px;}
 .eq_headline .eq_logo{display: block;}
@@ -10,7 +9,7 @@
 .eq_headline .eq_skiplist li a{display: block; padding-right: 10px; line-height: 50px; font-size: 22px;}
 .eq_headline .eq_skiplist li a:hover, .eq_headline .eq_skiplist ul li a:focus{font-weight: 600; color: #5a90d6;}
 .eq_headline .eq_skiplist li a img, .eq_headline .eq_skiplist ul li a img{position: relative;}
-.eq_headline .eq_skiplist li:hover a img, .eq_headline .eq_skiplist li a:focus img{transform: translateX(-30px);}
+.eq_headline .eq_skiplist li:hover a img, .eq_headline .eq_skiplist li a:focus img{-webkit-transform: translateX(-30px); -moz-transform: translateX(-30px); -o-transform: translateX(-30px); -ms-transform: translateX(-30px); transform: translateX(-30px);}
 .eq_headline .eq_skiplist li a:after{content: ""; position: absolute; width: 12px; height: 12px; top: 30px; right: 120px; background: url(../images/future/eq_nav.png) no-repeat center; z-index: 300; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'; opacity: 0;}
 .eq_headline .eq_skiplist:hover li a:after, .eq_headline .eq_skiplist li a:focus:after{-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)'; opacity: 1; right: 145px;}
 .eq_headline .eq_skiplist, .eq_headline .eq_skiplist li a, .eq_headline .eq_skiplist li a img, .eq_headline .eq_skiplist li a:after{overflow: hidden; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}

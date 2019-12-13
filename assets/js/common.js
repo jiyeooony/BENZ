@@ -65,6 +65,34 @@ $(document).ready(function () {
 		return false;
 	});
 
+	// window resize
+	$win.resize(function(){
+		winHei=$win.height();
+		$win.trigger("scroll");
+	});
+	
+	/* //스크롤에 fadeIn 동작하는 컨텐츠 */
+	var tgHei;		//outerHeight
+	var tgTop;	//offset().top
+	var start;
+	var end;
+
+	$win.on("scroll",function(){
+		var $fade=$(".fade");
+		var scrollT=$(this).scrollTop();
+
+		$fade.each(function  () {
+			tgHei=$(this).outerHeight();
+			tgTop=$(this).offset().top;
+
+			start = tgTop+tgHei*0.5-winHei;
+			end = tgTop+tgHei*0.6;
+
+			if (start < scrollT && end > scrollT) $(this).addClass("on");
+			else $(this).removeClass("on");
+		});
+	});
+
 	//mouseover
 	var $idxLinkEle = $("#cnt5 .idx_list li");
 
