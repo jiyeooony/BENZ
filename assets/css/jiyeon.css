@@ -102,7 +102,7 @@ iframe{border: none;}
 .slider ul li .md1 + div, .slider ul li .md2 + div, .slider ul li .md3 + div{display: none;}
 .featherlight .featherlight-content{padding: 0;margin: 0;width: 1350px;background: #fff;border:none;}
 .featherlight .featherlight-content .md_mo_cnt{position: relative;width: 100%;height: 600px;text-align: center;display: block;}
-.featherlight .featherlight-inner .md_txt{position: absolute;top: 350px;left: 50%;margin-left: 30px;vertical-align: middle;webkit-box-sizing: border-box;-moz-box-sizing: border-box;-o-box-sizing: border-box;box-sizing: border-box;background: #424242;padding: 24px 24px;text-align: right;color: #fff;opacity: 0.8;}
+.featherlight .featherlight-inner .md_txt{position: absolute;top: 350px;left: 50%;margin-left: 30px;vertical-align: middle;-moz-box-sizing: border-box;-o-box-sizing: border-box;box-sizing: border-box;background: #424242;padding: 24px 24px;text-align: right;color: #fff;opacity: 0.8;}
 .featherlight .featherlight-inner .txt11{top: 325px; width: 600px;height: 250px;}
 .featherlight .featherlight-inner .txt12{top: 275px;width: 600px;height: 300px;}
 .featherlight .featherlight-inner .txt13{top: 305px;width: 600px;height: 270px;}
@@ -120,4 +120,3 @@ iframe{border: none;}
 .featherlight .featherlight-inner .txt19 strong:before{left: 50%;margin-left: 217px;}
 .featherlight .featherlight-inner .md_txt p{font-size: 16px;font-weight: 400;letter-spacing: 0.16px;margin-top: 23px;line-height: 25px;}
 .featherlight .featherlight-close-icon {font-size: 30px;color:#fff;margin-top: 15px;margin-right: 15px;background:none;}
-
