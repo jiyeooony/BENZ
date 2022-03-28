@@ -108,7 +108,7 @@ header, nav, section, article, footer{display: block;}
 #skip a{position: absolute; top: 0;left: -9999px; z-index: 1000;}
 #skip a:focus{left: 0; width: 100%; height: 40px; line-height: 40px; text-align: center; background: #424242; color: #fff;}
 
-body{font-family: 'SCDream', 'Mulish';font-size: 16px; color: #333; line-height: 1; font-weight: 300;}
+body{font-family: 'GyeonggiB', 'SCDream', 'Mulish';font-size: 16px; color: #333; line-height: 1; font-weight: 300;}
 #wrap{max-width: 1920px; min-width: 1550px; overflow: hidden;}
 
 /* header */
@@ -117,7 +117,7 @@ body{font-family: 'SCDream', 'Mulish';font-size: 16px; color: #333; line-height:
 .logo{left: 160px; width: 72px; height: 70px; top: 15px; z-index: 1000;}
 
 #gnb{position: fixed; right: 0; top: 0; min-width: 1920px; height: 60px; line-height: 60px; padding-top: 20px; text-align: right; font-family: 'GyeonggiB', 'SCDream'; font-weight: 300; background: #1e1e1e;}
-#gnb > ul > li{position: relative; display: inline-block; font-size: 16px; margin-left: 40px;}
+#gnb > ul > li{position: relative; display: inline-block; font-size: 15px; margin-left: 40px;}
 #gnb > ul > li:nth-child(1){width: 54px;}
 #gnb > ul > li:nth-child(2){width: 77px;}
 #gnb > ul > li:nth-child(3){width: 37px;}
